@@ -1,0 +1,934 @@
+<html>
+    <head>
+        <title>RowP</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1">
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="imagens/logo_rowp.png">
+        
+        <!-- Fontes -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+        
+        <!-- Estilos -->
+        <style>
+        
+            /* Geral */
+            
+            body, html {
+                font-family: "Inter", sans-serif;
+                scroll-behavior: scroll;
+                padding: 0;
+            }
+            
+            .wrapper {
+                margin: 0 auto;
+                max-width: 1200px;
+            }
+            
+            /* Banner Principal */
+            
+            .principal {
+                background-color: #000;
+                padding: 8em 1em;
+            }
+            
+            .principal .conteudo {
+                align-content: center;
+                display: grid;
+                gap: 40px;
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .principal .conteudo .texto {
+                align-content: center;
+                display: grid;
+            }
+            
+            .principal .conteudo .texto .logo img {
+                margin-bottom: 1em;
+                width: 150px;
+            }
+            
+            .principal .conteudo .texto .titulo h3 {
+                background: -webkit-linear-gradient(#e4cfa6, #fff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                color: #fff;
+                font-size: 2.5em;
+                font-weight: 700;
+            }
+            
+            .principal .conteudo .texto .titulo p {
+                color: #fff;
+                margin-bottom: 2em;
+            }
+            
+            .principal .conteudo .texto .botao a {
+                background: #E4CFA6;
+                background: linear-gradient(90deg, rgba(228, 207, 166, 1) 50%, rgba(255, 255, 255, 1) 100%);
+                border: 1px solid #fff;
+                border-radius: 50px;
+                box-shadow: rgba(228, 207, 166, 0.5) 0px 7px 29px 0px;
+                color: #000;
+                font-weight: 400;
+                padding: 15px 35px;
+                text-decoration: none;
+            }
+            
+            .principal .conteudo .imagem img {
+                width: 100%;
+            }
+            
+            .principal .conteudo .imagem .mobile {
+                display: none;
+            }
+            
+            /* Crescer */
+            
+            .crescer {
+                background-image: url(imagens/fundo.webp);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding: 8em 1em;
+            }
+            
+            .crescer .conteudo .titulo h3 {
+                background: -webkit-linear-gradient(#e4cfa6, #fff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 2.5em;
+                font-weight: 700;
+                margin-bottom: 1.5em;
+                text-align: center;
+            }
+            
+            .crescer .conteudo .items {
+                display: grid;
+                gap: 20px;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                margin-bottom: 2em;
+            }
+            
+            .crescer .conteudo .items .item .icone {
+                display: grid;
+                justify-content: center;
+            }
+            
+            .crescer .conteudo .items .item .icone img {
+                margin-bottom: 1em;
+                width: 75px;
+            }
+            
+            .crescer .conteudo .items .item .info h3 {
+                color: #fff;
+                font-weight: 600;
+                text-align: center;
+            }
+            
+            .crescer .conteudo .items .item .info p {
+                color: #fff;
+                text-align: center;
+            }
+            
+            .crescer .conteudo .botao {
+                display: grid;
+                justify-content: center;
+            }
+            
+            .crescer .conteudo .botao a {
+                background: #E4CFA6;
+                background: linear-gradient(90deg, rgba(228, 207, 166, 1) 50%, rgba(255, 255, 255, 1) 100%);
+                border: 1px solid #fff;
+                border-radius: 50px;
+                box-shadow: rgba(228, 207, 166, 0.5) 0px 7px 29px 0px;
+                color: #000;
+                font-weight: 400;
+                padding: 15px 35px;
+                text-decoration: none;
+            }
+            
+            /* Escritório */
+            
+            .escritorio {
+                background-image: url(imagens/fundo2.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding: 6em 1em;
+            }
+            
+            .escritorio .conteudo .titulo h3 {
+                background: -webkit-linear-gradient(#e4cfa6, #fff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 2.5em;
+                font-weight: 700;
+                margin-bottom: 1.5em;
+                text-align: center;
+            }
+            
+            .escritorio .conteudo .items {
+                display: grid;
+                gap: 20px;
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .escritorio .conteudo .items .item {
+                align-items: center;
+                background: radial-gradient(circle at 100% 100%, #000000 0, #000000 6px, #fff 6px) 0% 0%/8px 8px no-repeat,
+            radial-gradient(circle at 0 100%, #000000 0, #000000 6px, #fff 6px) 100% 0%/8px 8px no-repeat,
+            radial-gradient(circle at 100% 0, #000000 0, #000000 6px, #fff 6px) 0% 100%/8px 8px no-repeat,
+            radial-gradient(circle at 0 0, #000000 0, #000000 6px, #fff 6px) 100% 100%/8px 8px no-repeat,
+            linear-gradient(#000000, #000000) 50% 50%/calc(100% - 4px) calc(100% - 16px) no-repeat,
+            linear-gradient(#000000, #000000) 50% 50%/calc(100% - 16px) calc(100% - 4px) no-repeat,
+            linear-gradient(90deg, #e4cfa6 0%, #fff 100%);
+                border-radius: 8px;
+                display: flex;
+                gap: 30px;
+                padding: 1.5em 2em;
+                box-sizing: border-box;
+            }
+            
+            .escritorio .conteudo .items .item .icone img {
+                width: 75px;
+            }
+            
+            .escritorio .conteudo .items .item .info h3 {
+                background: -webkit-linear-gradient(#e4cfa6, #fff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 1.5em;
+                font-weight: 700;
+                margin-bottom: 0.5em;
+            }
+            
+            .escritorio .conteudo .items .item .info p {
+                color: #fff;
+            }
+            
+            .escritorio .conteudo .botao {
+                display: grid;
+                justify-content: center;
+            }
+            
+            .escritorio .conteudo .botao p {
+                color: #fff;
+                font-size: 1.75em;
+                font-weight: 600;
+                margin-top: 1.5em;
+                text-align: center;
+            }
+            
+            .escritorio .conteudo .botao a {
+                background: #E4CFA6;
+                background: linear-gradient(90deg, rgba(228, 207, 166, 1) 50%, rgba(255, 255, 255, 1) 100%);
+                border: 1px solid #fff;
+                border-radius: 50px;
+                box-shadow: rgba(228, 207, 166, 0.5) 0px 7px 29px 0px;
+                color: #000;
+                font-weight: 400;
+                margin: 0 auto;
+                padding: 15px 35px;
+                text-decoration: none;
+                width: fit-content;
+            }
+            
+            /* Resultados */
+            
+            .resultados {
+                background-color: #000;
+                padding: 6em 1em;
+            }
+            
+            .resultados .conteudo .titulo h3 {
+                background: -webkit-linear-gradient(#e4cfa6, #fff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 2.5em;
+                font-weight: 700;
+                margin-bottom: 0.5em;
+                text-align: center;
+            }
+            
+            .resultados .conteudo .titulo p {
+                color: #fff;
+                font-size: 1.1em;
+                font-weight: 500;
+                text-align: center;
+            }
+            
+            .resultados .conteudo .items {
+                display: grid;
+                gap: 20px;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            
+            .resultados .conteudo .items .item {
+                align-content: start;
+                background: radial-gradient(circle at 100% 100%, #000000 0, #000000 6px, #fff 6px) 0% 0% / 8px 8px no-repeat, radial-gradient(circle at 0 100%, #000000 0, #000000 6px, #fff 6px) 100% 0% / 8px 8px no-repeat, radial-gradient(circle at 100% 0, #000000 0, #000000 6px, #fff 6px) 0% 100% / 8px 8px no-repeat, radial-gradient(circle at 0 0, #000000 0, #000000 6px, #fff 6px) 100% 100% / 8px 8px no-repeat, linear-gradient(#000000, #000000) 50% 50% / calc(100% - 4px) calc(100% - 16px) no-repeat, linear-gradient(#000000, #000000) 50% 50% / calc(100% - 16px) calc(100% - 4px) no-repeat, linear-gradient(90deg, #e4cfa6 0%, #fff 100%);
+                border-radius: 8px;
+                display: grid;
+                gap: 30px;
+                padding: 1.5em 2em;
+                box-sizing: border-box;
+            }
+            
+            .resultados .conteudo .items .item  h3 {
+                background: -webkit-linear-gradient(#e4cfa6, #fff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 600;
+            }
+            
+            .resultados .conteudo .items .item p {
+                color: #fff;
+            }
+            
+            .resultados .conteudo .botao {
+                display: grid;
+                justify-content: center;
+            }
+            
+            .resultados .conteudo .botao p {
+                color: #fff;
+            }
+            
+            .resultados .conteudo .botao a {
+                background: #E4CFA6;
+                background: linear-gradient(90deg, rgba(228, 207, 166, 1) 50%, rgba(255, 255, 255, 1) 100%);
+                border: 1px solid #fff;
+                border-radius: 50px;
+                box-shadow: rgba(228, 207, 166, 0.5) 0px 7px 29px 0px;
+                color: #000;
+                font-weight: 400;
+                margin: 0 auto;
+                padding: 15px 35px;
+                text-decoration: none;
+                width: fit-content;
+            }
+            
+            /* Quem Somos */
+            
+            .quemsomos {
+                background-color: #000;
+                padding: 6em 1em;
+            }
+            
+            .quemsomos .conteudo {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .quemsomos .conteudo .imagem img {
+                width: 70%;
+            }
+            
+            .quemsomos .conteudo .titulo {
+                align-content: center;
+                display: grid;
+            }
+            
+            .quemsomos .conteudo .titulo h3 {
+                background: -webkit-linear-gradient(#e4cfa6, #fff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 2.5em;
+                font-weight: 700;
+                margin-bottom: 0.5em;
+            }
+            
+            .quemsomos .conteudo .titulo p {
+                color: #fff;
+                font-size: 1.1em;
+                font-weight: 500;
+            }
+            
+            /* Perguntas Frequentes */
+            
+            .perguntas {
+                background-color: #000;
+                padding: 6em 1em;
+            }
+            
+            .perguntas .conteudo .titulo h3 {
+                background: -webkit-linear-gradient(#e4cfa6, #fff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 2.5em;
+                font-weight: 700;
+                margin-bottom: 1em;
+                text-align: center;
+            }
+            
+            .perguntas .conteudo .items {
+                margin: 0 auto;
+                max-width: 800px;
+            }
+            
+            .perguntas .conteudo .items .item {
+                border-bottom: 1px solid #fff;
+                margin-bottom: 1em;
+                padding: 1em 0em;
+            }
+            
+            .perguntas .conteudo .items .item .pergunta {
+                align-items: center;
+                cursor: pointer;
+                display: flex;
+                gap: 20px;
+                justify-content: space-between;
+            }
+            
+            .perguntas .conteudo .items .item .pergunta h3 {
+                color: #fff;
+                font-size: 1.25em;
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+            
+            .perguntas .conteudo .items .item .pergunta svg {
+                color: #fff;
+                font-size: 1em;
+            }
+            
+            .perguntas .conteudo .items .item .resposta {
+                display: none;
+                padding-top: 1em;
+            }
+            
+            .perguntas .conteudo .items .item .resposta p {
+                color: #fff;
+            }
+            
+            .perguntas .conteudo .botao {
+                display: grid;
+                justify-content: center;
+            }
+            
+            .perguntas .conteudo .botao p {
+                color: #fff;
+                font-size: 1.75em;
+                font-weight: 600;
+                margin-top: 1.5em;
+                text-align: center;
+            }
+            
+            .perguntas .conteudo .botao a {
+                background: #E4CFA6;
+                background: linear-gradient(90deg, rgba(228, 207, 166, 1) 50%, rgba(255, 255, 255, 1) 100%);
+                border: 1px solid #fff;
+                border-radius: 50px;
+                box-shadow: rgba(228, 207, 166, 0.5) 0px 7px 29px 0px;
+                color: #000;
+                font-weight: 400;
+                margin: 0 auto;
+                padding: 15px 35px;
+                text-decoration: none;
+                width: fit-content;
+            }
+            
+            /* Transformação */
+            
+            .transformacao {
+                background-color: #000;
+                padding: 4em 1em;
+            }
+            
+            .transformacao .conteudo .titulo h3 {
+                background: -webkit-linear-gradient(#e4cfa6, #fff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 2.5em;
+                font-weight: 700;
+                margin-bottom: 1em;
+                text-align: center;
+            }
+            
+            .transformacao .conteudo .items {
+                display: flex;
+                gap: 25px;
+                justify-content: center;
+                margin-bottom: 2em;
+            }
+            
+            .transformacao .conteudo .items .item p {
+                color: #fff;
+                font-weight: 500;
+            }
+            
+            .transformacao .conteudo .items .item p i {
+                margin-right: 20px;
+            }
+            
+            .transformacao .conteudo .botao {
+                display: grid;
+                justiy-content: center;
+            }
+            
+            .transformacao .conteudo .botao a {
+                background: #E4CFA6;
+                background: linear-gradient(90deg, rgba(228, 207, 166, 1) 50%, rgba(255, 255, 255, 1) 100%);
+                border: 1px solid #fff;
+                border-radius: 50px;
+                box-shadow: rgba(228, 207, 166, 0.5) 0px 7px 29px 0px;
+                color: #000;
+                font-weight: 400;
+                margin: 0 auto;
+                padding: 15px 35px;
+                text-decoration: none;
+                width: fit-content;
+            }
+            
+            /* Rodapé */
+            
+            footer {
+                background-color: #000;
+                padding: 4em 1em;
+            }
+            
+            footer .conteudo .topo {
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            footer .conteudo .topo .logo img {
+                width: 150px;
+            }
+            
+            footer .conteudo .topo .contato {
+                display: flex;
+                gap: 20px;
+            }
+            
+            footer .conteudo .topo .contato a {
+                color: #fff;
+                text-decoration: none;
+            }
+            
+            footer .conteudo .topo .contato a svg {
+                font-size: 0.9em;
+            }
+            
+            footer .conteudo .base .copyright {
+                border-top: 1px solid rgba(255, 255, 255, 0.5);
+                color: #fff;
+                font-size: 0.8em;
+                margin-top: 4em;
+                padding-top: 4em;
+                text-align: center;
+            }
+            
+            /* Responsivo */
+            
+            @media(max-width: 768px) {
+                
+                /* Principal */
+                
+                .principal .conteudo, .crescer .conteudo .items, .escritorio .conteudo .items, .resultados .conteudo .items, .quemsomos .conteudo {
+                    grid-template-columns: 1fr;
+                }
+                
+                .principal .conteudo .imagem .desktop {
+                    display: none;
+                }
+                
+                .principal .conteudo .imagem .mobile {
+                    display: block;
+                }
+                
+                .principal .conteudo .imagem img {
+                    width: 100%;
+                }
+                
+                .transformacao .conteudo .items {
+                    display: grid;
+                }
+                
+                .quemsomos .conteudo .imagem img {
+                    width: 100%;
+                }
+                
+                footer .conteudo .topo, footer .conteudo .topo .logo, footer .conteudo .topo .contato {
+                    display: grid;
+                    justify-content: center;
+                }
+                
+                footer .conteudo .topo .contato {
+                    gap: 10px;
+                    margin-top: 2em;
+                }
+                
+                footer .conteudo .topo .contato a {
+                    text-align: center;
+                }
+                
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+        
+        <!-- Principal -->
+        <section class="principal">
+            <div class="wrapper">
+                <div class="conteudo">
+                    <div class="texto">
+                        <!--<div class="logo">
+                            <img src="imagens/logo.png">
+                        </div>-->
+                        <div class="titulo">
+                            <h3>Chegou a solução definitiva para escritórios de advocacia que querem crescer de forma previsível!</h3>
+                            <p>Descubra como podemos acrescentar ao seu escritório uma máquina de captação de clientes, com estratégias baseadas na Metodologia Rowp. Law, a qual já foi implementada em mais de 150 escritórios nos últimos 4 anos e é 100% adequada às normas da OAB.</p>
+                        </div>
+                        <div class="botao">
+                            <a href="javascript:void(0);">Cadastre-se Agora</a>
+                        </div>
+                    </div>
+                    <div class="imagem">
+                        <img src="imagens/banner_desktop.webp" class="desktop">
+                        <img src="imagens/banner_mobile.webp" class="mobile">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Crescer -->
+        <section class="crescer">
+            <div class="wrapper">
+                <div class="conteudo">
+                    <div class="titulo">
+                        <h3>Como faremos seu escritório crescer</h3>
+                    </div>
+                    <div class="items">
+                        <div class="item">
+                            <div class="icone">
+                                <img src="imagens/icone-atracao.svg">
+                            </div>
+                            <div class="info">
+                                <h3>Atração</h3>
+                                <p>Estratégias para atrair clientes certos<br> para seu escritório.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icone">
+                                <img src="imagens/icone-funil.svg">
+                            </div>
+                            <div class="info">
+                                <h3>Funil de Aquisição</h3>
+                                <p>Conteúdo estratégico para<br> qualificar leads.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icone">
+                                <img src="imagens/icone-engajamento.svg">
+                            </div>
+                            <div class="info">
+                                <h3>Conversão</h3>
+                                <p>Transformação de leads<br> em clientes reais.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icone">
+                                <img src="imagens/icone-trackeamento.svg">
+                            </div>
+                            <div class="info">
+                                <h3>Crescimento</h3>
+                                <p>Multiplicação das estratégias para<br> expansão sustentável do seu escritório.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="botao">
+                        <a href="javascript:void(0);">Cadastre-se Agora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Escritório -->
+        <section class="escritorio">
+            <div class="wrapper">
+                <div class="conteudo">
+                    <div class="titulo">
+                        <h3>O que podemos fazer pelo seu escritório?</h3>
+                    </div>
+                    <div class="items">
+                        <div class="item">
+                            <div class="icone">
+                                <img src="imagens/icone-trafego.svg">
+                            </div>
+                            <div class="info">
+                                <h3>Tráfego Pago para Advogados</h3>
+                                <p>Estratégias avançadas de Google Ads, Facebook Ads, Tik Tok Ads para captação de clientes qualificados.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icone">
+                                <img src="imagens/icone-redes.svg">
+                            </div>
+                            <div class="info">
+                                <h3>Gestão de Redes Sociais</h3>
+                                <p>Atrair e engajar clientes com conteúdos relevantes e estratégicos.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icone">
+                                <img src="imagens/icone-desenvolvimento.svg">
+                            </div>
+                            <div class="info">
+                                <h3>Desenvolvimento de Sites Jurídicos</h3>
+                                <p>Sites profissionais, responsivos e otimizados para converter visitantes em clientes reais.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icone">
+                                <img src="imagens/icone-automacao.svg">
+                            </div>
+                            <div class="info">
+                                <h3>Automação com Inteligência Artificial</h3>
+                                <p>Transforme contatos em consultas agendadas com atendimento humanizado operado integralmente por Inteligência Artificial.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="botao">
+                        <p>Quer entender como podemos transformar o seu escritório?</p>
+                        <a href="javascript:void(0);">Cadastre-se Agora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Resultados -->
+        <section class="resultados">
+            <div class="wrapper">
+                <div class="conteudo">
+                    <div class="titulo">
+                        <h3>Resultados Comprovados</h3>
+                        <p>Veja como ajudamos outros escritórios a crescer:</p>
+                    </div>
+                    <div claass="items">
+                        <div class="item">
+                            <h3>Narciso Advogados</h3>
+                            <p>+200% de fechamento de contratos em apenas 2 meses.</p>
+                        </div>
+                        <div class="item">
+                            <h3>MFF Advocacia</h3>
+                            <p>Triplicou o número de consultas com estratégias de tráfego pago e quadruplicou o faturamento no primeiro mês. </p>
+                        </div>
+                        <div class="item">
+                            <h3>Gonçalves & Medeiros Advocacia</h3>
+                            <p>Presença digital consolidada, aumento de autoridade e mais previsibilidade no faturamento.</p>
+                        </div>
+                    </div>
+                    <div class="botao">
+                        <p>Seu escritório pode ser o próximo case de sucesso!</p>
+                        <a href="javascript:void(0);">Cadastre-se Agora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quem Somos -->
+        <section class="quemsomos">
+            <div class="wrapper">
+                <div class="conteudo">
+                    <div class="imagem">
+                        <img src="imagens/logo_rowp.png">
+                    </div>
+                    <div class="titulo">
+                        <h3>Quem Somos</h3>
+                        <p>Na Rowp. Tech & Sales, nossa missão é digitalizar e multiplicar o número de bons clientes para escritórios de advocacia, otimizando sua operação e elevando seu reconhecimento e faturamento. Valorizamos excelência e personalização, aplicando estratégias validadas para garantir resultados superiores. Com soluções que otimizam processos e melhoram a presença online, queremos ser seu parceiro na sua transformação e sucesso no mercado jurídico. Juntos, podemos superar desafios e alcançar novos patamares.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Perguntas Frequentes -->
+        <section class="perguntas">
+            <div class="wrapper">
+                <div class="conteudo">
+                    <div class="titulo">
+                        <h3>Perguntas Frequentes</h3>
+                    </div>
+                    <div class="items">
+                        <div class="item">
+                            <div class="pergunta">
+                                <h3>Como funciona a metodologia da Rowp Tech?</h3>
+                                <i data-feather="plus"></i>
+                            </div>
+                            <div class="resposta">
+                                <p>Nossa metodologia segue um processo estratégico em 6 etapas, desde a estruturação da presença digital do seu escritório até a conversão de leads em clientes. Realizamos análises de mercado, otimizamos campanhas e aplicamos as melhores práticas de marketing jurídico para gerar previsibilidade no crescimento do seu escritório.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pergunta">
+                                <h3>Em quanto tempo vejo resultados?</h3>
+                                <i data-feather="plus"></i>
+                            </div>
+                            <div class="resposta">
+                                <p>O tempo pode variar conforme o serviço contratado e o estágio atual do seu escritório. Estratégias como tráfego pago geram resultados mais rápidos, enquanto a construção de autoridade e nutrição de leads oferecem crescimento sustentável e de longo prazo. Em média, nossos clientes começam a ver mudanças significativas a partir do segundo mês.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pergunta">
+                                <h3>O que está incluso nos serviços oferecidos?</h3>
+                                <i data-feather="plus"></i>
+                            </div>
+                            <div class="resposta">
+                                <p>Oferecemos um pacote completo para escritórios de advocacia, incluindo gestão de tráfego pago, criação de conteúdo jurídico, automação de leads, desenvolvimento de sites e consultoria estratégica. Todas as soluções são personalizadas para atender às necessidades do seu escritório.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pergunta">
+                                <h3>O que diferencia a metodologia da Rowp Law de outras agências de marketing?</h3>
+                                <i data-feather="plus"></i>
+                            </div>
+                            <div class="resposta">
+                                <p>Diferente das agências genéricas, nossa metodologia é 100% especializada no mercado jurídico. Seguimos todas as diretrizes da OAB e aplicamos estratégias validadas em mercados mais sofisticados para atrair e converter clientes de forma ética e previsível. Além disso, oferecemos suporte contínuo e acompanhamento personalizado para garantir resultados.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pergunta">
+                                <h3>Meu escritório já investe em marketing, como vocês podem ajudar?</h3>
+                                <i data-feather="plus"></i>
+                            </div>
+                            <div class="resposta">
+                                <p>Analisamos as campanhas atuais e identificamos oportunidades de otimização para melhorar o desempenho e maximizar o retorno sobre investimento. Ajustamos sua estratégia para garantir que cada ação traga mais eficiência e conversões qualificadas.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pergunta">
+                                <h3>Qual é o investimento necessário para começar?</h3>
+                                <i data-feather="plus"></i>
+                            </div>
+                            <div class="resposta">
+                                <p>O valor do investimento depende do plano escolhido e das necessidades do seu escritório. Após um diagnóstico gratuito, montamos uma proposta personalizada e transparente para garantir o melhor custo-benefício e previsibilidade nos resultados.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pergunta">
+                                <h3>Vocês oferecem garantias de resultados?</h3>
+                                <i data-feather="plus"></i>
+                            </div>
+                            <div class="resposta">
+                                <p>Trabalhamos com métricas claras e estratégias testadas, mas sabemos que o mercado jurídico possui variáveis externas. Nosso compromisso é com a execução impecável, ajustes contínuos e acompanhamento estratégico para garantir os melhores resultados possíveis para seu escritório.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pergunta">
+                                <h3>Como vocês escolhem as estratégias para o meu escritório?</h3>
+                                <i data-feather="plus"></i>
+                            </div>
+                            <div class="resposta">
+                                <p>Cada estratégia é baseada em um diagnóstico aprofundado do seu nicho, concorrência e público-alvo. A partir disso, traçamos um plano personalizado que combina as melhores práticas do marketing jurídico com a realidade do seu escritório, garantindo previsibilidade e crescimento sustentável.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pergunta">
+                                <h3>O marketing jurídico da Rowp. Tech & Sales segue as diretrizes da OAB?</h3>
+                                <i data-feather="plus"></i>
+                            </div>
+                            <div class="resposta">
+                                <p>Sim! Todas as nossas estratégias são 100% éticas e seguem o Código de Ética da OAB.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pergunta">
+                                <h3>Posso contratar apenas um serviço específico?</h3>
+                                <i data-feather="plus"></i>
+                            </div>
+                            <div class="resposta">
+                                <p>Sim! Nossos serviços são personalizáveis para atender exatamente o que seu escritório precisa.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="botao">
+                        <p>Fale com um especialista e descubra o melhor plano para você!</p>
+                        <a href="javascript:void(0);">Cadastre-se Agora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Transformação -->
+        <section class="transformacao">
+            <div class="wrapper">
+                <div class="conteudo">
+                    <div class="titulo">
+                        <h3>Comece agora a transformação do seu escritório!</h3>
+                    </div>
+                    <div class="items">
+                        <div class="item">
+                            <p><i data-feather="check-square"></i> Atendimento especializado e transparente</p>
+                        </div>
+                        <div class="item">
+                            <p><i data-feather="check-square"></i> Estratégias validadas e eficazes</p>
+                        </div>
+                        <div class="item">
+                            <p><i data-feather="check-square"></i> Mais previsibilidade para seu crescimento</p>
+                        </div>
+                    </div>
+                    <div class="botao">
+                        <a href="javascript:void(0);">Cadastre-se Agora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Rodapé -->
+        <footer>
+            <div class="wrapper">
+                <div class="conteudo">
+                    <div class="topo">
+                        <div class="logo">
+                            <img src="imagens/logo.png">
+                        </div>
+                        <div class="contato">
+                            <a href="mailto:contato@rowp.online">
+                                <i data-feather="mail"></i>
+                                contato@rowp.online
+                            </a>
+                            <a href="https://www.instagram.com/rowp.tech/">
+                                <i data-feather="instagram"></i>
+                                @rowp.tech
+                            </a>
+                            <a href="https://www.instagram.com/ncardozo.rowp/">
+                                <i data-feather="instagram"></i>
+                                @ncardozo.rowp 
+                            </a>
+                        </div>
+                    </div>
+                    <div class="base">
+                        <div class="copyright">
+                            © RowP 2025 | Todos os direitos reservados.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+        
+        <!-- FontAwesome -->
+        <script src="https://unpkg.com/feather-icons"></script>
+        
+        <!-- Scripts -->
+        <script>
+            
+            feather.replace();
+            
+        </script>
+        
+    </body>
+</html>
