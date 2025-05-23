@@ -402,6 +402,10 @@
                 display: none;
                 padding-top: 1em;
             }
+
+            .perguntas .conteudo .items .item.aberto .resposta {
+                display: block;
+            }
             
             .perguntas .conteudo .items .item .resposta p {
                 color: #fff;
@@ -925,8 +929,29 @@
         
         <!-- Scripts -->
         <script>
-            
+        
+            // Ícones
             feather.replace();
+            
+            // Perguntas
+            $(".pergunta").click(function() {
+                
+                // Se está fechado
+                if(!$(this).parent().hasClass("aberto")) {
+                    
+                    $(this).parent().addClass("aberto");
+                    $(this).children("svg").replaceWith(feather.icons['minus'].toSvg());
+                    
+                }
+                
+                else if($(this).parent().hasClass("aberto")) {
+                    
+                    $(this).parent().removeClass("aberto");
+                    $(this).children("svg").replaceWith(feather.icons['plus'].toSvg());
+                    
+                }
+                
+            });
             
         </script>
         
