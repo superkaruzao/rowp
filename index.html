@@ -15,6 +15,32 @@
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
         
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-T9DWG6LV');</script>
+        <!-- End Google Tag Manager -->
+        
+        <!-- Meta Pixel Code -->
+        <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1234074921309756');
+        fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1234074921309756&ev=PageView&noscript=1"
+        /></noscript>
+        <!-- End Meta Pixel Code -->
+        
         <!-- Estilos -->
         <style>
         
@@ -35,7 +61,7 @@
             
             .principal {
                 background-color: #000;
-                padding: 8em 1em;
+                padding: 4em 1em 6em;
             }
             
             .principal .conteudo {
@@ -53,6 +79,11 @@
             .principal .conteudo .texto .logo img {
                 margin-bottom: 1em;
                 width: 150px;
+            }
+            
+            .principal .conteudo .texto .titulo img {
+                margin-bottom: 20px;
+                width: 75px;
             }
             
             .principal .conteudo .texto .titulo h3 {
@@ -315,6 +346,101 @@
                 width: fit-content;
             }
             
+            /* Formulário */
+            
+            .formulario {
+                background-color: #000;
+                padding: 4em 1em;
+            }
+            
+            .formulario .conteudo {
+                display: grid;
+                gap: 30px;
+                grid-template-columns:  1fr 1fr;
+            }
+            
+            .formulario .conteudo .modulos {
+                align-content: center;
+                display: grid;
+                gap: 20px;
+            }
+            
+            .formulario .conteudo .modulos .passo {
+                background: radial-gradient(circle at 100% 100%, #000000 0, #000000 6px, #fff 6px) 0% 0% / 8px 8px no-repeat, radial-gradient(circle at 0 100%, #000000 0, #000000 6px, #fff 6px) 100% 0% / 8px 8px no-repeat, radial-gradient(circle at 100% 0, #000000 0, #000000 6px, #fff 6px) 0% 100% / 8px 8px no-repeat, radial-gradient(circle at 0 0, #000000 0, #000000 6px, #fff 6px) 100% 100% / 8px 8px no-repeat, linear-gradient(#000000, #000000) 50% 50% / calc(100% - 4px) calc(100% - 16px) no-repeat, linear-gradient(#000000, #000000) 50% 50% / calc(100% - 16px) calc(100% - 4px) no-repeat, linear-gradient(90deg, #e4cfa6 0%, #fff 100%);
+                border-radius: 8px;
+                display: flex;
+                gap: 30px;
+                padding: 1.5em 2em;
+                box-sizing: border-box;
+            }
+            
+            .formulario .conteudo .modulos .passo h3 {
+                background: -webkit-linear-gradient(#e4cfa6, #fff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 600;
+            }
+            
+            .formulario .conteudo .modulos .passo p {
+                color: #fff;
+                margin-bottom: 0;
+            }
+            
+            .formulario .conteudo .modulos .icone {
+                display: grid;
+                justify-content: center;
+            }
+            
+            .formulario .conteudo .modulos .icone svg {
+                color: #e4cfa6;
+                height: 40px;
+                width: 40px;
+            }
+            
+            .formulario .conteudo .contato .campos form {
+                display: grid;
+                gap: 10px;
+            }
+            
+            .formulario .conteudo .contato .campos form .grid {
+                display: grid;
+                gap: 10px;
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .formulario .conteudo .contato .campos form .campo input, .formulario .conteudo .contato .campos form .campo select, .formulario .conteudo .contato .campos form .campo textarea {
+                background-color: transparent;
+                border: 1px solid #e4cfa6;
+                border-radius: 5px;
+                color: #fff;
+                padding: 10px;
+                width: 100%;
+            }
+            
+            .formulario .conteudo .contato .campos form .campo input::placeholder {
+                color: #fff;
+            }
+            
+            .formulario .conteudo .contato .campos form .campo label {
+                color: #fff;
+                margin-bottom: 5px;
+            }
+            
+            .formulario .conteudo .contato .campos form .campo button {
+                background: #E4CFA6;
+                background: linear-gradient(90deg, rgba(228, 207, 166, 1) 50%, rgba(255, 255, 255, 1) 100%);
+                border: 1px solid #fff;
+                border-radius: 5px;
+                box-shadow: rgba(228, 207, 166, 0.5) 0px 7px 29px 0px;
+                color: #000;
+                font-weight: 600;
+                margin: 0 auto;
+                padding: 15px 35px;
+                text-decoration: none;
+                text-transform: uppercase;
+                width: 100%;
+            }
+            
             /* Quem Somos */
             
             .quemsomos {
@@ -499,6 +625,7 @@
             }
             
             footer .conteudo .topo {
+                align-items: center;
                 display: flex;
                 justify-content: space-between;
             }
@@ -521,6 +648,11 @@
                 font-size: 0.9em;
             }
             
+            footer .conteudo .topo .mapa iframe {
+                height: 300px;
+                width: 500px;
+            }
+            
             footer .conteudo .base .copyright {
                 border-top: 1px solid rgba(255, 255, 255, 0.5);
                 color: #fff;
@@ -536,7 +668,7 @@
                 
                 /* Principal */
                 
-                .principal .conteudo, .crescer .conteudo .items, .escritorio .conteudo .items, .resultados .conteudo .items, .quemsomos .conteudo {
+                .principal .conteudo, .crescer .conteudo .items, .escritorio .conteudo .items, .resultados .conteudo .items, .formulario .conteudo , .quemsomos .conteudo {
                     grid-template-columns: 1fr;
                 }
                 
@@ -574,12 +706,23 @@
                     text-align: center;
                 }
                 
+                footer .conteudo .topo .mapa iframe {
+                    height:;
+                    margin-top: 2em;
+                    width: 100%;
+                }
+                
             }
             
         </style>
         
     </head>
     <body>
+        
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9DWG6LV"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
         
         <!-- Principal -->
         <section class="principal">
@@ -590,6 +733,7 @@
                             <img src="imagens/logo.png">
                         </div>-->
                         <div class="titulo">
+                            <img src="imagens/logoff.webp">
                             <h3>Conheça a solução usada pelos maiores advogados para atrair mais clientes todos os meses!</h3>
                             <p>Descubra como podemos multiplicar a quantidade de clientes qualificados de maneira previsível gerando mais reconhecimento, liberdade e lucro para os sócios do escritório.<br><br>A Metodologia Growth Rowp Law ou GRL, implementada em mais de 150 escritórios nos últimos 4 anos, é 100% adequada às diretrizes éticas da OAB.</p>
                         </div>
@@ -598,8 +742,7 @@
                         </div>
                     </div>
                     <div class="imagem">
-                        <img src="imagens/banner_desktop.webp" class="desktop">
-                        <img src="imagens/banner_mobile.webp" class="mobile">
+                        <img src="imagens/principal.webp">
                     </div>
                 </div>
             </div>
@@ -720,16 +863,16 @@
                     </div>
                     <div class="items">
                         <div class="item">
-                            <h3>Narciso Advogados</h3>
-                            <p>+200% de fechamento de contratos em apenas 2 meses.</p>
-                        </div>
-                        <div class="item">
                             <h3>MFF Advocacia</h3>
-                            <p>Triplicou o número de consultas com estratégias de tráfego pago e quadruplicou o faturamento no primeiro mês. </p>
+                            <p>Do faturamento inicial de 0 a 280 mil reais com contratos trabalhistas em 2 meses.</p>
                         </div>
                         <div class="item">
-                            <h3>Gonçalves & Medeiros Advocacia</h3>
-                            <p>Presença digital consolidada, aumento de autoridade e mais previsibilidade no faturamento.</p>
+                            <h3>Olavo Filho Advocacia</h3>
+                            <p>273 Leads gerados com custo médio de R$ 4,34, em apenas 30 dias.</p>
+                        </div>
+                        <div class="item">
+                            <h3>SA Advogados Associados</h3>
+                            <p>18 contratos fechados na primeira semana de parceira.</p>
                         </div>
                     </div>
                     <div class="botao">
@@ -740,12 +883,117 @@
             </div>
         </section>
         
+        <!-- Formulário -->
+        <section class="formulario">
+            <div class="wrapper">
+                <div class="conteudo">
+                    <div class="modulos">
+                        <div class="passo">
+                            <div class="icone"></div>
+                            <div class="texto">
+                                <h3>Preencha o formulário</h3>
+                                <p>Envie suas informações de contato. Todos os seus dados estarão seguros, vamos cuidar bem deles.</p>
+                            </div>
+                        </div>
+                        <div class="icone">
+                            <i data-feather="chevron-down"></i>
+                        </div>
+                        <div class="passo">
+                            <div class="icone"></div>
+                            <div class="texto">
+                                <h3>Receba uma ligação</h3>
+                                <p>Em até 12 horas, um dos nossos especialistas fará uma ligação para agendar a reunião mais importante com você.</p>
+                            </div>
+                        </div>
+                        <div class="icone">
+                            <i data-feather="chevron-down"></i>
+                        </div>
+                        <div class="passo">
+                            <div class="icone"></div>
+                            <div class="texto">
+                                <h3>Reunião Estratégica</h3>
+                                <p>A Reunião Estratégica é online, personalizada e <b>sem custos.</b></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contato">
+                        <div class="campos">
+                            <form method="post" action="contato.php">
+                                <div class="campo">
+                                    <input type="text" name="nome" placeholder="Nome">
+                                </div>
+                                <div class="grid">
+                                    <div class="campo">
+                                        <input type="tel" name="telefone" placeholder="Telefone">
+                                    </div>
+                                    <div class="campo">
+                                        <input type="mail" name="email" placeholder="E-mail">
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="campo">
+                                        <label for="nome_empresa">Como se chama sua empresa ou negócio?</label>
+                                        <input type="text" name="nome_empresa">
+                                    </div>
+                                    <div class="campo">
+                                        <label for="instagram_empresa">Qual instagram da sua empresa ou negócio? *</label>
+                                        <input type="text" name="instagram_empresa">
+                                    </div>
+                                </div>
+                                <div class="campo">
+                                    <label for="cenario">Nos conte um pouco a respeito do seu negócio e o atual cenário dele hoje, em relação ao marketing.</label>
+                                    <textarea name="cenario" rows="5"></textarea>
+                                </div>
+                                <div class="campo">
+                                    <label for="experiencia">Você já teve experiência com alguma empresa de marketing? *</label>
+                                    <select name="experiencia">
+                                        <option value="Sim">Sim</option>
+                                        <option value="Não">Não</option>
+                                        <option value="Trabalho com uma hoje">Trabalho com uma hoje</option>
+                                    </select>
+                                </div>
+                                <div class="campo">
+                                    <label for="faturamento">Qual sua média de faturamento mensal aproximadamente? *</label>
+                                    <select name="faturamento">
+                                        <option value="Até R$15.000">Até R$15.000</option>
+                                        <option value="R$15 mil - R$30 mil">R$15 mil - R$30 mil</option>
+                                        <option value="R$30 mil - R$70 mil">R$30 mil - R$70 mil</option>
+                                        <option value="R$70 mil - R$100 mil">R$70 mil - R$100 mil</option>
+                                        <option value="Acima de R$100 mil">Acima de R$100 mil</option>
+                                    </select>
+                                </div>
+                                <div class="campo">
+                                    <label for="urgencia">Qual seu nível de urgência para implementar o método GRL na sua empresa e colher os frutos? *</label>
+                                    <select name="urgencia">
+                                        <option value="Essa semana/na outra">Essa semana/na outra</option>
+                                        <option value="De 1 a 3 meses">De 1 a 3 meses</option>
+                                        <option value="Acima de 3 meses">Acima de 3 meses</option>
+                                    </select>
+                                </div>
+                                <div class="campo">
+                                    <label for="urgencia">O investimento mínimo começa a partir de R$ 1.600 mil - R$ 4.700 mil/mês, para ter possíveis clientes todos os dias te procurando, deixar sua marca mais reconhecida, trazer mais vendas entre outras coisas que você busca, esse investimento hoje faz sentido para você nesse momento? *</label>
+                                    <select name="urgencia">
+                                        <option value="Sim">Sim</option>
+                                        <option value="Não">Não</option>
+                                        <option value="Preciso entender">Preciso entender</option>
+                                    </select>
+                                </div>
+                                <div class="campo">
+                                    <button>Enviar Informações</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!-- Quem Somos -->
         <section class="quemsomos">
             <div class="wrapper">
                 <div class="conteudo">
                     <div class="imagem">
-                        <img src="imagens/logo_rowp.png">
+                        <img src="imagens/quem-somos.webp">
                     </div>
                     <div class="titulo">
                         <h3>Quem Somos</h3>
@@ -904,15 +1152,18 @@
                                 <i data-feather="instagram"></i>
                                 @rowp.tech
                             </a>
-                            <a href="https://www.instagram.com/ncardozo.rowp/">
-                                <i data-feather="instagram"></i>
-                                @ncardozo.rowp 
+                            <a href="https://www.linkedin.com/company/rowp">
+                                <i data-feather="linkedin"></i>
+                                @rowp
                             </a>
+                        </div>
+                        <div class="mapa">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.0133797227986!2d-47.05755692427427!3d-22.912877338089555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xabd883cce963dad7%3A0x1be43c7f81506e92!2sRowp.%20Tech%20%26%20Sales%20Company!5e0!3m2!1spt-BR!2sbr!4v1754108256639!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                     <div class="base">
                         <div class="copyright">
-                            © RowP 2025 | Todos os direitos reservados.
+                            © Rowp 2025 | Todos os direitos reservados.
                         </div>
                     </div>
                 </div>
