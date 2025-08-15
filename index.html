@@ -1,15 +1,8 @@
 <html>
     <head>
-        <title>Rowp | Acelere o crescimento do seu Escritório de Advocacia.</title>
+        <title>Rowp</title>
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1">
-        <meta name="description" content="Conheça a solução usada pelos maiores advogados para atrair mais clientes todos os dias!">
-
-        <!-- OG Tags -->
-        <meta property="og:title" content="Rowp | Acelere o crescimento do seu Escritório de Advocacia.">
-        <meta property="og:description" content="Conheça a solução usada pelos maiores advogados para atrair mais clientes todos os dias!">
-        <meta property="og:image" content="imagens/logo_rowp.png">
-        <meta property="og:url" content="https://rowp.com.br/">
         
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="imagens/logo_rowp.png">
@@ -67,7 +60,12 @@
             /* Banner Principal */
             
             .principal {
-                background-color: #000;
+                background-image: url(imagens/Textura1.webp);
+                background-color: rgba(0, 0, 0, 0.7);
+                background-blend-mode: color;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
                 padding: 4em 1em 6em;
             }
             
@@ -98,7 +96,7 @@
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 color: #fff;
-                font-size: 2.25em;
+                font-size: 2.5em;
                 font-weight: 700;
             }
             
@@ -281,7 +279,12 @@
             /* Resultados */
             
             .resultados {
-                background-color: #000;
+                background-image: url(imagens/Textura2.webp);
+                background-color: rgba(0, 0, 0, 0.7);
+                background-blend-mode: color;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
                 padding: 6em 1em;
             }
             
@@ -319,7 +322,13 @@
                 box-sizing: border-box;
             }
             
-            .resultados .conteudo .items .item  h3 {
+            .resultados .conteudo .items .item img {
+                height: 200px;
+                object-fit: contain;
+                width: 100%;
+            }
+            
+            .resultados .conteudo .items .item h3 {
                 background: -webkit-linear-gradient(#e4cfa6, #fff);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -404,6 +413,11 @@
                 width: 40px;
             }
             
+            .formulario .conteudo .contato  {
+                align-items: center;
+                display: grid;
+            }
+            
             .formulario .conteudo .contato .campos form {
                 display: grid;
                 gap: 10px;
@@ -415,6 +429,15 @@
                 grid-template-columns: 1fr 1fr;
             }
             
+            .formulario .conteudo .contato .campos form .passo {
+                display: grid;
+                gap: 20px;
+            }
+            
+            .formulario .conteudo .contato .campos form .passo.esconde {
+                display: none;
+            }
+            
             .formulario .conteudo .contato .campos form .campo input, .formulario .conteudo .contato .campos form .campo select, .formulario .conteudo .contato .campos form .campo textarea {
                 background-color: transparent;
                 border: 1px solid #e4cfa6;
@@ -422,6 +445,10 @@
                 color: #fff;
                 padding: 10px;
                 width: 100%;
+            }
+            
+            .formulario .conteudo .contato .campos form .campo .preto {
+                color: #000;
             }
             
             .formulario .conteudo .contato .campos form .campo input::placeholder {
@@ -448,10 +475,19 @@
                 width: 100%;
             }
             
+            .formulario .conteudo .contato .campos form .campo p {
+                display: none;
+            }
+            
             /* Quem Somos */
             
             .quemsomos {
-                background-color: #000;
+                background-image: url(imagens/Textura1.webp);
+                background-color: rgba(0, 0, 0, 0.7);
+                background-blend-mode: color;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
                 padding: 6em 1em;
             }
             
@@ -669,6 +705,19 @@
                 text-align: center;
             }
             
+            /* Botão */
+            
+            .botaoFlutuante {
+                position: fixed;
+                bottom: 10;
+                right: 10;
+                z-index: 999999;
+            }
+            
+            .botaoFlutuante img {
+                width: 75px;
+            }
+            
             /* Responsivo */
             
             @media(max-width: 768px) {
@@ -741,17 +790,15 @@
                         </div>-->
                         <div class="titulo">
                             <img src="imagens/logoff.webp">
-                            <h3>Acelere o crescimento do seu Escritório de Advocacia!</h3>
-                            <p>Conheça a solução usada pelos maiores advogados para atrair mais clientes todos os dias!
-                               <br><br>
-                               A Metodologia Growth ROWP Law tem ajudado mais de 150 escritórios a crescer nos últimos 4 anos e é 100% adequada às diretrizes éticas da OAB.</p>
+                            <h3>Conheça a solução usada pelos maiores advogados para atrair mais clientes todos os meses!</h3>
+                            <p>Descubra como podemos multiplicar a quantidade de clientes qualificados de maneira previsível gerando mais reconhecimento, liberdade e lucro para os sócios do escritório.<br><br>A Metodologia Growth Rowp Law ou GRL, implementada em mais de 150 escritórios nos últimos 4 anos, é 100% adequada às diretrizes éticas da OAB.</p>
                         </div>
                         <div class="botao">
                             <a href="https://wa.me/message/JFFG5MF2NOLTD1">Cadastre-se Agora</a>
                         </div>
                     </div>
                     <div class="imagem">
-                        <img src="imagens/principal.webp">
+                        <img src="imagens/principaff.webp">
                     </div>
                 </div>
             </div>
@@ -872,14 +919,17 @@
                     </div>
                     <div class="items">
                         <div class="item">
+                            <img src="imagens/MFF-Logo-transparente.webp">
                             <h3>MFF Advocacia</h3>
                             <p>Do faturamento inicial de 0 a 280 mil reais com contratos trabalhistas em 2 meses.</p>
                         </div>
                         <div class="item">
+                            <img src="imagens/olavo.webp">
                             <h3>Olavo Filho Advocacia</h3>
                             <p>273 Leads gerados com custo médio de R$ 4,34, em apenas 30 dias.</p>
                         </div>
                         <div class="item">
+                            <img src="imagens/silmara.webp">
                             <h3>SA Advogados Associados</h3>
                             <p>18 contratos fechados na primeira semana de parceira.</p>
                         </div>
@@ -928,67 +978,76 @@
                     <div class="contato">
                         <div class="campos">
                             <form method="post" action="contato.php">
-                                <div class="campo">
-                                    <input type="text" name="nome" placeholder="Nome">
-                                </div>
-                                <div class="grid">
+                                <div class="passo" data-passo="1">
                                     <div class="campo">
-                                        <input type="tel" name="telefone" placeholder="Telefone">
+                                        <input type="text" name="nome" placeholder="Nome" class="nome">
                                     </div>
                                     <div class="campo">
-                                        <input type="mail" name="email" placeholder="E-mail">
+                                        <input type="tel" name="telefone" placeholder="Telefone" class="telefone">
+                                    </div>
+                                    <div class="campo">
+                                        <input type="mail" name="email" placeholder="E-mail" class="email">
+                                    </div>
+                                    <div class="campo">
+                                        <button type="button" data-proximo="2">Próximo</button>
                                     </div>
                                 </div>
-                                <div class="grid">
+                                <div class="passo esconde" data-passo="2">
                                     <div class="campo">
                                         <label for="nome_empresa">Como se chama sua empresa ou negócio?</label>
-                                        <input type="text" name="nome_empresa">
+                                        <input type="text" name="nome_empresa" class="nome_empresa">
                                     </div>
                                     <div class="campo">
                                         <label for="instagram_empresa">Qual instagram da sua empresa ou negócio? *</label>
-                                        <input type="text" name="instagram_empresa">
+                                        <input type="text" name="instagram_empresa" class="instagram_empresa">
+                                    </div>
+                                    <div class="campo">
+                                        <label for="cenario">Nos conte um pouco a respeito do seu negócio e o atual cenário dele hoje, em relação ao marketing.</label>
+                                        <textarea name="cenario" rows="5" class="cenario "></textarea>
+                                    </div>
+                                    <div class="campo">
+                                        <button type="button" data-proximo="3">Próximo</button>
                                     </div>
                                 </div>
-                                <div class="campo">
-                                    <label for="cenario">Nos conte um pouco a respeito do seu negócio e o atual cenário dele hoje, em relação ao marketing.</label>
-                                    <textarea name="cenario" rows="5"></textarea>
-                                </div>
-                                <div class="campo">
-                                    <label for="experiencia">Você já teve experiência com alguma empresa de marketing? *</label>
-                                    <select name="experiencia">
-                                        <option value="Sim">Sim</option>
-                                        <option value="Não">Não</option>
-                                        <option value="Trabalho com uma hoje">Trabalho com uma hoje</option>
-                                    </select>
-                                </div>
-                                <div class="campo">
-                                    <label for="faturamento">Qual sua média de faturamento mensal aproximadamente? *</label>
-                                    <select name="faturamento">
-                                        <option value="Até R$15.000">Até R$15.000</option>
-                                        <option value="R$15 mil - R$30 mil">R$15 mil - R$30 mil</option>
-                                        <option value="R$30 mil - R$70 mil">R$30 mil - R$70 mil</option>
-                                        <option value="R$70 mil - R$100 mil">R$70 mil - R$100 mil</option>
-                                        <option value="Acima de R$100 mil">Acima de R$100 mil</option>
-                                    </select>
-                                </div>
-                                <div class="campo">
-                                    <label for="urgencia">Qual seu nível de urgência para implementar o método GRL na sua empresa e colher os frutos? *</label>
-                                    <select name="urgencia">
-                                        <option value="Essa semana/na outra">Essa semana/na outra</option>
-                                        <option value="De 1 a 3 meses">De 1 a 3 meses</option>
-                                        <option value="Acima de 3 meses">Acima de 3 meses</option>
-                                    </select>
-                                </div>
-                                <div class="campo">
-                                    <label for="urgencia">O investimento mínimo começa a partir de R$ 1.600 mil - R$ 4.700 mil/mês, para ter possíveis clientes todos os dias te procurando, deixar sua marca mais reconhecida, trazer mais vendas entre outras coisas que você busca, esse investimento hoje faz sentido para você nesse momento? *</label>
-                                    <select name="urgencia">
-                                        <option value="Sim">Sim</option>
-                                        <option value="Não">Não</option>
-                                        <option value="Preciso entender">Preciso entender</option>
-                                    </select>
-                                </div>
-                                <div class="campo">
-                                    <button>Enviar Informações</button>
+                                <div class="passo esconde" data-passo="3">
+                                    <div class="campo">
+                                        <label for="experiencia">Você já teve experiência com alguma empresa de marketing? *</label>
+                                        <select name="experiencia" class="experiencia">
+                                            <option value="Sim" class="preto">Sim</option>
+                                            <option value="Não" class="preto">Não</option>
+                                            <option value="Trabalho com uma hoje" class="preto">Trabalho com uma hoje</option>
+                                        </select>
+                                    </div>
+                                    <div class="campo">
+                                        <label for="faturamento">Qual sua média de faturamento mensal aproximadamente? *</label>
+                                        <select name="faturamento" class="faturamento">
+                                            <option value="Até R$15.000" class="preto">Até R$15.000</option>
+                                            <option value="R$15 mil - R$30 mil" class="preto">R$15 mil - R$30 mil</option>
+                                            <option value="R$30 mil - R$70 mil" class="preto">R$30 mil - R$70 mil</option>
+                                            <option value="R$70 mil - R$100 mil" class="preto">R$70 mil - R$100 mil</option>
+                                            <option value="Acima de R$100 mil" class="preto">Acima de R$100 mil</option>
+                                        </select>
+                                    </div>
+                                    <div class="campo">
+                                        <label for="urgencia">Qual seu nível de urgência para implementar o método GRL na sua empresa e colher os frutos? *</label>
+                                        <select name="urgencia" class="urgencia">
+                                            <option value="Essa semana/na outra" class="preto">Essa semana/na outra</option>
+                                            <option value="De 1 a 3 meses" class="preto">De 1 a 3 meses</option>
+                                            <option value="Acima de 3 meses" class="preto">Acima de 3 meses</option>
+                                        </select>
+                                    </div>
+                                    <div class="campo">
+                                        <label for="investimento">O investimento mínimo começa a partir de R$ 1.600 mil - R$ 4.700 mil/mês, para ter possíveis clientes todos os dias te procurando, deixar sua marca mais reconhecida, trazer mais vendas entre outras coisas que você busca, esse investimento hoje faz sentido para você nesse momento? *</label>
+                                        <select name="investimento" class="investimento">
+                                            <option value="Sim" class="preto">Sim</option>
+                                            <option value="Não" class="preto">Não</option>
+                                            <option value="Preciso entender" class="preto">Preciso entender</option>
+                                        </select>
+                                    </div>
+                                    <div class="campo">
+                                        <button type="button" class="enviarInformacoes">Enviar Informações</button>
+                                        <p>Em breve entraremos em contato com você!</p>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -1002,7 +1061,7 @@
             <div class="wrapper">
                 <div class="conteudo">
                     <div class="imagem">
-                        <img src="imagens/quem-somos.webp">
+                        <img src="imagens/Rowp-logo-transparente.webp">
                     </div>
                     <div class="titulo">
                         <h3>Quem Somos</h3>
@@ -1179,6 +1238,11 @@
             </div>
         </footer>
         
+        <!-- Botão Flutuante Whatsapp -->
+        <div class="botaoFlutuante">
+            <img src="imagens/whatsapp-svgrepo-com.svg">
+        </div>
+        
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         
@@ -1211,6 +1275,57 @@
                     $(this).children("svg").replaceWith(feather.icons['plus'].toSvg());
                     
                 }
+                
+            });
+            
+            // Próximo passo formulário
+            
+            $("form button[type='button']").click(function() {
+                
+                passo = $(this).attr("data-proximo");
+                
+                ultimo = passo - 1;
+                
+                $("[data-passo='"+ultimo+"'").hide();
+                
+                $("[data-passo='"+passo+"'").css("display","grid");
+                
+            });
+            
+            $(".enviarInformacoes").click(function() {
+                
+                $(".enviarInformacoes").html("Enviando...");
+                
+                var nome = $("form .nome").val();
+                var telefone = $("form .telefone").val();
+                var email = $("form .email").val();
+                var nome_empresa = $("form .nome_empresa").val();
+                var instagram_empresa = $("form .instagram_empresa").val();
+                var cenario = $("form .cenario").val();
+                var experiencia = $("form .experiencia").val();
+                var faturamento = $("form .faturamento").val();
+                var urgencia = $("form .urgencia").val();
+                var investimento = $("form .investimento").val();
+                
+                $.post("enviarEmail.php",{
+                    
+                    nome: nome,
+                    telefone: telefone,
+                    email: email,
+                    nome_empresa: nome_empresa,
+                    instagram_empresa: instagram_empresa,
+                    cenario: cenario,
+                    experiencia: experiencia,
+                    faturamento: faturamento,
+                    urgencia: urgencia,
+                    investimento: investimento
+                    
+                }, function(resposta) {
+                    
+                    $(".enviarInformacoes").html("Obrigado!");
+                    $(".formulario .conteudo .contato .campos form .campo p").fadeIn();
+                    
+                });
                 
             });
             
