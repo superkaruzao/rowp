@@ -47,6 +47,9 @@
             /* Geral */
             
             body, html {
+                background-image: url(https://rowp.com.br/imagens/textura.webp);
+                background-position: center;
+                background-size: contain;
                 font-family: "Inter", sans-serif;
                 scroll-behavior: scroll;
                 padding: 0;
@@ -56,11 +59,15 @@
                 margin: 0 auto;
                 max-width: 1200px;
             }
+
+            section {
+                background-color: rgba(0, 0, 0, 0.7);
+            }
             
             /* Banner Principal */
             
             .principal {
-                background-image: url(imagens/Textura1.webp);
+                /*background-image: url(imagens/Textura1.webp);*/
                 background-color: rgba(0, 0, 0, 0.7);
                 background-blend-mode: color;
                 background-position: center;
@@ -128,7 +135,7 @@
             /* Crescer */
             
             .crescer {
-                background-image: url(imagens/fundo.webp);
+                /*background-image: url(imagens/fundo.webp);*/
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -193,7 +200,7 @@
             /* Escritório */
             
             .escritorio {
-                background-image: url(imagens/fundo2.jpg);
+                /*background-image: url(imagens/fundo2.jpg);*/
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -279,7 +286,7 @@
             /* Resultados */
             
             .resultados {
-                background-image: url(imagens/Textura2.webp);
+                /*background-image: url(imagens/Textura2.webp);*/
                 background-color: rgba(0, 0, 0, 0.7);
                 background-blend-mode: color;
                 background-position: center;
@@ -482,7 +489,7 @@
             /* Quem Somos */
             
             .quemsomos {
-                background-image: url(imagens/Textura1.webp);
+                /*background-image: url(imagens/Textura1.webp);*/
                 background-color: rgba(0, 0, 0, 0.7);
                 background-blend-mode: color;
                 background-position: center;
@@ -721,6 +728,10 @@
             /* Responsivo */
             
             @media(max-width: 768px) {
+
+                section {
+                    padding: 2em 1em !important;
+                }
                 
                 /* Principal */
                 
