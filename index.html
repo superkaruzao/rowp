@@ -1,1153 +1,1345 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escritório Digital sem Agência | Tese, Anúncio e WhatsApp</title>
-    <meta name="description" content="A nova era da advocacia digital. Tenha tese, anúncios e scripts prontos em 7 dias. Conforme as regras da OAB. Sem agência.">
-    
-    <!-- Fonte Modern (Similar a Aeonik) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<html>
+    <head>
+        <title>Rowp</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1">
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="imagens/logo_rowp.png">
+        
+        <!-- Fontes -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1984155249176139');
-    fbq('track', 'PageView');
-    </script>
-    <!-- End Meta Pixel Code -->
-
-    <style>
-        /* --- RESET & BASE (Modern Legaltech Theme) --- */
-        :root {
-            /* Palette Dark Premium */
-            --bg-color: #070A0F;
-            --bg-secondary: #0F1623;
-            --surface-color: rgba(15, 22, 35, 0.6); /* Glassy */
-            --border-color: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(198, 174, 132, 0.4);
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+        
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-T9DWG6LV');</script>
+        <!-- End Google Tag Manager -->
+        
+        <!-- Meta Pixel Code -->
+        <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1234074921309756');
+        fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1234074921309756&ev=PageView&noscript=1"
+        /></noscript>
+        <!-- End Meta Pixel Code -->
+        
+        <!-- Estilos -->
+        <style>
+        
+            /* Geral */
             
-            --text-color: #E5E7EB;
-            --text-heading: #FFFFFF;
-            --muted-text: #9CA3AF;
+            body, html {
+                background-color: rgba(0, 0, 0, 0.7) !important;
+                background-image: url(https://rowp.com.br/imagens/textura.webp);
+                background-position: center;
+                background-size: contain;
+                font-family: "Inter", sans-serif;
+                scroll-behavior: scroll;
+                padding: 0;
+            }
             
-            /* Accents */
-            --primary: #C6AE84; /* Dourado */
-            --primary-glow: rgba(198, 174, 132, 0.3);
-            --primary-hover: #D4C099;
-            --accent-blue: #60A5FA; /* Toque tech sutil */
+            .wrapper {
+                margin: 0 auto;
+                max-width: 1200px;
+            }
+
+            section {
+                background-color: rgba(0, 0, 0, 0.7) !important;
+            }
             
-            /* Text on primary */
-            --btn-text: #05080C; 
-
-            --radius-sm: 8px;
-            --radius-md: 16px;
-            --radius-lg: 24px;
-            --radius-pill: 9999px;
+            /* Banner Principal */
             
-            --font-main: 'Plus Jakarta Sans', sans-serif;
-            --max-width: 1200px;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: var(--font-main);
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-            background-image: radial-gradient(circle at 50% 0%, #1a202c 0%, #070a0f 60%);
-        }
-
-        h1, h2, h3, h4, h5 {
-            line-height: 1.15;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--text-heading);
-            letter-spacing: -0.03em;
-        }
-        
-        h1 { font-size: 3rem; font-weight: 800; }
-        h2 { font-size: 2.25rem; }
-        
-        @media (min-width: 768px) {
-            h1 { font-size: 4rem; }
-            h2 { font-size: 3rem; }
-        }
-
-        p {
-            margin-bottom: 1.5rem;
-            color: var(--muted-text);
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-
-        ul { list-style: none; }
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
-
-        /* --- UTILITIES --- */
-        .container {
-            width: 100%;
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        .section-padding { padding: 6rem 0; }
-        
-        .text-center { text-align: center; }
-        .text-primary { color: var(--primary); }
-        .flex { display: flex; }
-        .flex-col { flex-direction: column; }
-        .items-center { align-items: center; }
-        .justify-center { justify-content: center; }
-        .gap-2 { gap: 1rem; }
-        .gap-4 { gap: 2rem; }
-
-        .grid { display: grid; gap: 1.5rem; }
-        .grid-2 { grid-template-columns: 1fr; }
-        .grid-3 { grid-template-columns: 1fr; }
-
-        @media (min-width: 768px) {
-            .grid-2 { grid-template-columns: 1fr 1fr; }
-            .grid-3 { grid-template-columns: repeat(3, 1fr); }
-        }
-
-        /* --- COMPONENTS --- */
-        
-        /* Glass Card Effect */
-        .glass-card {
-            background: var(--surface-color);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
-            padding: 2rem;
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .glass-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: -100%; width: 50%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.03), transparent);
-            transform: skewX(-25deg);
-            transition: 0.5s;
-        }
-
-        .glass-card:hover {
-            border-color: var(--border-hover);
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5);
-        }
-
-        .glass-card:hover::before {
-            left: 150%;
-        }
-
-        /* White Card Variant (For Audience Section) */
-        .white-card {
-            background: #FFFFFF;
-            color: #0F1623;
-            border-radius: var(--radius-lg);
-            padding: 3rem;
-            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.2);
-            position: relative;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        .white-card h3 { color: #0F1623; }
-        .white-card p, .white-card li, .white-card span { color: #4B5563; }
-        .white-card svg { width: 22px; height: 22px; }
-
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: var(--primary);
-            color: var(--btn-text);
-            font-weight: 700;
-            padding: 1rem 2.5rem;
-            border-radius: var(--radius-pill);
-            transition: all 0.3s ease;
-            font-size: 1rem;
-            cursor: pointer;
-            border: none;
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        @media (min-width: 640px) {
-            .btn { width: auto; }
-        }
-
-        .btn::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(255,255,255,0.15);
-            opacity: 0;
-            transition: 0.3s;
-            z-index: -1;
-        }
-
-        .btn:hover {
-            transform: scale(1.02);
-            box-shadow: 0 0 20px var(--primary-glow);
-        }
-        .btn:hover::after { opacity: 1; }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--text-heading);
-            border: 1px solid var(--border-color);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--primary);
-            background-color: rgba(198, 174, 132, 0.05);
-            color: var(--primary);
-            box-shadow: none;
-        }
-
-        .icon-box {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, rgba(198, 174, 132, 0.1), rgba(198, 174, 132, 0.05));
-            color: var(--primary);
-            border-radius: var(--radius-md);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            border: 1px solid rgba(198, 174, 132, 0.15);
-        }
-
-        /* --- HEADER --- */
-        header {
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 1000px;
-            background: rgba(15, 22, 35, 0.8);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-pill);
-            z-index: 1000;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            padding: 0 1.5rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
-
-        .logo {
-            font-weight: 800;
-            font-size: 1rem;
-            color: #FFFFFF;
-            letter-spacing: -0.02em;
-        }
-
-        nav ul { display: none; }
-
-        @media (min-width: 900px) {
-            nav ul {
+            .principal {
+                /*background-image: url(imagens/Textura1.webp);*/
+                background-color: rgba(0, 0, 0, 0.7);
+                background-blend-mode: color;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding: 4em 1em 6em;
+            }
+            
+            .principal .conteudo {
+                align-content: center;
+                display: grid;
+                gap: 40px;
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .principal .conteudo .texto {
+                align-content: center;
+                display: grid;
+            }
+            
+            .principal .conteudo .texto .logo img {
+                margin-bottom: 1em;
+                width: 150px;
+            }
+            
+            .principal .conteudo .texto .titulo img {
+                margin-bottom: 20px;
+                width: 75px;
+            }
+            
+            .principal .conteudo .texto .titulo h3 {
+                background: -webkit-linear-gradient(#e4cfa6, #fff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                color: #fff;
+                font-size: 2.5em;
+                font-weight: 700;
+            }
+            
+            .principal .conteudo .texto .titulo p {
+                color: #fff;
+                margin-bottom: 2em;
+            }
+            
+            .principal .conteudo .texto .botao a {
+                background: #E4CFA6;
+                background: linear-gradient(90deg, rgba(228, 207, 166, 1) 50%, rgba(255, 255, 255, 1) 100%);
+                border: 1px solid #fff;
+                border-radius: 50px;
+                box-shadow: rgba(228, 207, 166, 0.5) 0px 7px 29px 0px;
+                color: #000;
+                font-weight: 400;
+                padding: 15px 35px;
+                text-decoration: none;
+            }
+            
+            .principal .conteudo .imagem img {
+                width: 100%;
+            }
+            
+            .principal .conteudo .imagem .mobile {
+                display: none;
+            }
+            
+            /* Crescer */
+            
+            .crescer {
+                /*background-image: url(imagens/fundo.webp);*/
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding: 8em 1em;
+            }
+            
+            .crescer .conteudo .titulo h3 {
+                background: -webkit-linear-gradient(#e4cfa6, #fff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 2.5em;
+                font-weight: 700;
+                margin-bottom: 1.5em;
+                text-align: center;
+            }
+            
+            .crescer .conteudo .items {
+                display: grid;
+                gap: 20px;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                margin-bottom: 2em;
+            }
+            
+            .crescer .conteudo .items .item .icone {
+                display: grid;
+                justify-content: center;
+            }
+            
+            .crescer .conteudo .items .item .icone img {
+                margin-bottom: 1em;
+                width: 75px;
+            }
+            
+            .crescer .conteudo .items .item .info h3 {
+                color: #fff;
+                font-weight: 600;
+                text-align: center;
+            }
+            
+            .crescer .conteudo .items .item .info p {
+                color: #fff;
+                text-align: center;
+            }
+            
+            .crescer .conteudo .botao {
+                display: grid;
+                justify-content: center;
+            }
+            
+            .crescer .conteudo .botao a {
+                background: #E4CFA6;
+                background: linear-gradient(90deg, rgba(228, 207, 166, 1) 50%, rgba(255, 255, 255, 1) 100%);
+                border: 1px solid #fff;
+                border-radius: 50px;
+                box-shadow: rgba(228, 207, 166, 0.5) 0px 7px 29px 0px;
+                color: #000;
+                font-weight: 400;
+                padding: 15px 35px;
+                text-decoration: none;
+            }
+            
+            /* Escritório */
+            
+            .escritorio {
+                /*background-image: url(imagens/fundo2.jpg);*/
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding: 6em 1em;
+            }
+            
+            .escritorio .conteudo .titulo h3 {
+                background: -webkit-linear-gradient(#e4cfa6, #fff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 2.5em;
+                font-weight: 700;
+                margin-bottom: 1.5em;
+                text-align: center;
+            }
+            
+            .escritorio .conteudo .items {
+                display: grid;
+                gap: 20px;
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .escritorio .conteudo .items .item {
+                align-items: center;
+                background: radial-gradient(circle at 100% 100%, #000000 0, #000000 6px, #fff 6px) 0% 0%/8px 8px no-repeat,
+            radial-gradient(circle at 0 100%, #000000 0, #000000 6px, #fff 6px) 100% 0%/8px 8px no-repeat,
+            radial-gradient(circle at 100% 0, #000000 0, #000000 6px, #fff 6px) 0% 100%/8px 8px no-repeat,
+            radial-gradient(circle at 0 0, #000000 0, #000000 6px, #fff 6px) 100% 100%/8px 8px no-repeat,
+            linear-gradient(#000000, #000000) 50% 50%/calc(100% - 4px) calc(100% - 16px) no-repeat,
+            linear-gradient(#000000, #000000) 50% 50%/calc(100% - 16px) calc(100% - 4px) no-repeat,
+            linear-gradient(90deg, #e4cfa6 0%, #fff 100%);
+                border-radius: 8px;
                 display: flex;
-                gap: 2rem;
-                font-size: 0.9rem;
-                font-weight: 500;
-                color: var(--muted-text);
+                gap: 30px;
+                padding: 1.5em 2em;
+                box-sizing: border-box;
             }
-            nav ul li a:hover { color: var(--text-heading); }
-        }
-
-        .header-cta { display: none; }
-        @media (min-width: 640px) { .header-cta { display: block; } }
-
-        /* --- HERO --- */
-        .hero {
-            padding-top: 180px;
-            padding-bottom: 6rem;
-            position: relative;
-            text-align: center;
-        }
-
-        .glow-spot {
-            position: absolute;
-            width: 60vw;
-            height: 60vw;
-            background: radial-gradient(circle, rgba(198, 174, 132, 0.08) 0%, transparent 70%);
-            top: -20%;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            background: rgba(198, 174, 132, 0.1);
-            color: var(--primary);
-            padding: 0.5rem 1.25rem;
-            border-radius: var(--radius-pill);
-            font-size: 0.75rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            border: 1px solid rgba(198, 174, 132, 0.2);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            box-shadow: 0 0 20px rgba(198, 174, 132, 0.1);
-        }
-
-        .hero-sub {
-            font-size: 1.25rem;
-            margin: 0 auto 2.5rem;
-            max-width: 700px;
-            color: var(--muted-text);
-        }
-
-        .hero-bullets {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem 1.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .pill-tag {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid var(--border-color);
-            padding: 0.5rem 1rem;
-            border-radius: var(--radius-sm);
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text-color);
-        }
-        .pill-tag svg { color: var(--primary); width: 18px; height: 18px; }
-
-        .trust-strip {
-            margin-top: 4rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            font-size: 0.85rem;
-            color: var(--muted-text);
-            opacity: 0.7;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        /* --- AUDIENCE --- */
-        .check-list li {
-            margin-bottom: 1.25rem;
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-            font-size: 1rem;
-        }
-        
-        .check-list svg { flex-shrink: 0; margin-top: 2px; }
-
-        .green-theme { border-top: 4px solid var(--primary); }
-        .red-theme { border-top: 4px solid #ef4444; }
-        
-        /* --- CONTENT GRID --- */
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: 1.5rem;
-        }
-        @media (min-width: 768px) {
-            .cards-grid {
-                grid-template-columns: repeat(3, 1fr); 
-                grid-auto-rows: 1fr;
-            }
-        }
-
-        .content-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
-            padding: 2rem;
-            transition: 0.3s;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        .content-card:hover {
-            border-color: var(--border-hover);
-            background: rgba(15, 22, 35, 0.8);
-        }
-        
-        .content-card h4 { margin-top: auto; margin-bottom: 0.5rem; }
-        .content-card .icon-box { margin-bottom: 1.5rem; }
-        .content-card .card-result { margin-top: auto; }
-
-        .card-result {
-            display: inline-block;
-            margin-top: 1.5rem;
-            padding: 0.5rem 1rem;
-            background: rgba(198, 174, 132, 0.1);
-            color: var(--primary);
-            border-radius: var(--radius-sm);
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        /* --- TIMELINE --- */
-        .timeline-wrapper {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-            display: grid;
-            gap: 2rem;
-        }
-        
-        @media (min-width: 768px) {
-            .timeline-wrapper::before {
-                content: '';
-                position: absolute;
-                left: 50%;
-                top: 0;
-                bottom: 0;
-                width: 2px;
-                background: linear-gradient(to bottom, transparent, var(--primary), transparent);
-                transform: translateX(-50%);
-            }
-        }
-
-        .timeline-row {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        @media (min-width: 768px) {
-            .timeline-row {
-                flex-direction: row;
-                justify-content: space-between;
-                text-align: left;
-            }
-            .timeline-row:nth-child(odd) { flex-direction: row-reverse; text-align: right; }
-            .timeline-row:nth-child(odd) .timeline-content { align-items: flex-end; }
-            .timeline-row:nth-child(even) .timeline-content { align-items: flex-start; }
             
-            .timeline-spacer { width: 50%; }
-        }
+            .escritorio .conteudo .items .item .icone img {
+                width: 75px;
+            }
+            
+            .escritorio .conteudo .items .item .info h3 {
+                background: -webkit-linear-gradient(#e4cfa6, #fff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 1.5em;
+                font-weight: 700;
+                margin-bottom: 0.5em;
+            }
+            
+            .escritorio .conteudo .items .item .info p {
+                color: #fff;
+            }
+            
+            .escritorio .conteudo .botao {
+                display: grid;
+                justify-content: center;
+            }
+            
+            .escritorio .conteudo .botao p {
+                color: #fff;
+                font-size: 1.75em;
+                font-weight: 600;
+                margin-top: 1.5em;
+                text-align: center;
+            }
+            
+            .escritorio .conteudo .botao a {
+                background: #E4CFA6;
+                background: linear-gradient(90deg, rgba(228, 207, 166, 1) 50%, rgba(255, 255, 255, 1) 100%);
+                border: 1px solid #fff;
+                border-radius: 50px;
+                box-shadow: rgba(228, 207, 166, 0.5) 0px 7px 29px 0px;
+                color: #000;
+                font-weight: 400;
+                margin: 0 auto;
+                padding: 15px 35px;
+                text-decoration: none;
+                width: fit-content;
+            }
+            
+            /* Resultados */
+            
+            .resultados {
+                /*background-image: url(imagens/Textura2.webp);*/
+                background-color: rgba(0, 0, 0, 0.7);
+                background-blend-mode: color;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding: 6em 1em;
+            }
+            
+            .resultados .conteudo .titulo h3 {
+                background: -webkit-linear-gradient(#e4cfa6, #fff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 2.5em;
+                font-weight: 700;
+                margin-bottom: 0.5em;
+                text-align: center;
+            }
+            
+            .resultados .conteudo .titulo p {
+                color: #fff;
+                font-size: 1.1em;
+                font-weight: 500;
+                text-align: center;
+            }
+            
+            .resultados .conteudo .items {
+                display: grid;
+                gap: 20px;
+                grid-template-columns: 1fr 1fr 1fr;
+                margin: 2em 0em;
+            }
+            
+            .resultados .conteudo .items .item {
+                align-content: start;
+                background: radial-gradient(circle at 100% 100%, #000000 0, #000000 6px, #fff 6px) 0% 0% / 8px 8px no-repeat, radial-gradient(circle at 0 100%, #000000 0, #000000 6px, #fff 6px) 100% 0% / 8px 8px no-repeat, radial-gradient(circle at 100% 0, #000000 0, #000000 6px, #fff 6px) 0% 100% / 8px 8px no-repeat, radial-gradient(circle at 0 0, #000000 0, #000000 6px, #fff 6px) 100% 100% / 8px 8px no-repeat, linear-gradient(#000000, #000000) 50% 50% / calc(100% - 4px) calc(100% - 16px) no-repeat, linear-gradient(#000000, #000000) 50% 50% / calc(100% - 16px) calc(100% - 4px) no-repeat, linear-gradient(90deg, #e4cfa6 0%, #fff 100%);
+                border-radius: 8px;
+                display: grid;
+                gap: 30px;
+                padding: 1.5em 2em;
+                box-sizing: border-box;
+            }
+            
+            .resultados .conteudo .items .item img {
+                height: 200px;
+                object-fit: contain;
+                width: 100%;
+            }
+            
+            .resultados .conteudo .items .item h3 {
+                background: -webkit-linear-gradient(#e4cfa6, #fff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 600;
+            }
+            
+            .resultados .conteudo .items .item p {
+                color: #fff;
+            }
+            
+            .resultados .conteudo .botao {
+                display: grid;
+                justify-content: center;
+            }
+            
+            .resultados .conteudo .botao p {
+                color: #fff;
+            }
+            
+            .resultados .conteudo .botao a {
+                background: #E4CFA6;
+                background: linear-gradient(90deg, rgba(228, 207, 166, 1) 50%, rgba(255, 255, 255, 1) 100%);
+                border: 1px solid #fff;
+                border-radius: 50px;
+                box-shadow: rgba(228, 207, 166, 0.5) 0px 7px 29px 0px;
+                color: #000;
+                font-weight: 400;
+                margin: 0 auto;
+                padding: 15px 35px;
+                text-decoration: none;
+                width: fit-content;
+            }
+            
+            /* Formulário */
+            
+            .formulario {
+                background-color: #000;
+                padding: 4em 1em;
+            }
+            
+            .formulario .conteudo {
+                display: grid;
+                gap: 30px;
+                grid-template-columns:  1fr 1fr;
+            }
+            
+            .formulario .conteudo .modulos {
+                align-content: center;
+                display: grid;
+                gap: 20px;
+            }
+            
+            .formulario .conteudo .modulos .passo {
+                background: radial-gradient(circle at 100% 100%, #000000 0, #000000 6px, #fff 6px) 0% 0% / 8px 8px no-repeat, radial-gradient(circle at 0 100%, #000000 0, #000000 6px, #fff 6px) 100% 0% / 8px 8px no-repeat, radial-gradient(circle at 100% 0, #000000 0, #000000 6px, #fff 6px) 0% 100% / 8px 8px no-repeat, radial-gradient(circle at 0 0, #000000 0, #000000 6px, #fff 6px) 100% 100% / 8px 8px no-repeat, linear-gradient(#000000, #000000) 50% 50% / calc(100% - 4px) calc(100% - 16px) no-repeat, linear-gradient(#000000, #000000) 50% 50% / calc(100% - 16px) calc(100% - 4px) no-repeat, linear-gradient(90deg, #e4cfa6 0%, #fff 100%);
+                border-radius: 8px;
+                display: flex;
+                gap: 30px;
+                padding: 1.5em 2em;
+                box-sizing: border-box;
+            }
+            
+            .formulario .conteudo .modulos .passo h3 {
+                background: -webkit-linear-gradient(#e4cfa6, #fff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 600;
+            }
+            
+            .formulario .conteudo .modulos .passo p {
+                color: #fff;
+                margin-bottom: 0;
+            }
+            
+            .formulario .conteudo .modulos .icone {
+                display: grid;
+                justify-content: center;
+            }
+            
+            .formulario .conteudo .modulos .icone svg {
+                color: #e4cfa6;
+                height: 40px;
+                width: 40px;
+            }
+            
+            .formulario .conteudo .contato  {
+                align-items: center;
+                display: grid;
+            }
+            
+            .formulario .conteudo .contato .campos form {
+                display: grid;
+                gap: 10px;
+            }
+            
+            .formulario .conteudo .contato .campos form .grid {
+                display: grid;
+                gap: 10px;
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .formulario .conteudo .contato .campos form .passo {
+                display: grid;
+                gap: 20px;
+            }
+            
+            .formulario .conteudo .contato .campos form .passo.esconde {
+                display: none;
+            }
+            
+            .formulario .conteudo .contato .campos form .campo input, .formulario .conteudo .contato .campos form .campo select, .formulario .conteudo .contato .campos form .campo textarea {
+                background-color: transparent;
+                border: 1px solid #e4cfa6;
+                border-radius: 5px;
+                color: #fff;
+                padding: 10px;
+                width: 100%;
+            }
+            
+            .formulario .conteudo .contato .campos form .campo .preto {
+                color: #000;
+            }
+            
+            .formulario .conteudo .contato .campos form .campo input::placeholder {
+                color: #fff;
+            }
+            
+            .formulario .conteudo .contato .campos form .campo label {
+                color: #fff;
+                margin-bottom: 5px;
+            }
+            
+            .formulario .conteudo .contato .campos form .campo button {
+                background: #E4CFA6;
+                background: linear-gradient(90deg, rgba(228, 207, 166, 1) 50%, rgba(255, 255, 255, 1) 100%);
+                border: 1px solid #fff;
+                border-radius: 5px;
+                box-shadow: rgba(228, 207, 166, 0.5) 0px 7px 29px 0px;
+                color: #000;
+                font-weight: 600;
+                margin: 0 auto;
+                padding: 15px 35px;
+                text-decoration: none;
+                text-transform: uppercase;
+                width: 100%;
+            }
+            
+            .formulario .conteudo .contato .campos form .campo p {
+                display: none;
+            }
+            
+            /* Quem Somos */
+            
+            .quemsomos {
+                /*background-image: url(imagens/Textura1.webp);*/
+                background-color: rgba(0, 0, 0, 0.7);
+                background-blend-mode: color;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding: 6em 1em;
+            }
+            
+            .quemsomos .conteudo {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .quemsomos .conteudo .imagem img {
+                width: 70%;
+            }
+            
+            .quemsomos .conteudo .titulo {
+                align-content: center;
+                display: grid;
+            }
+            
+            .quemsomos .conteudo .titulo h3 {
+                background: -webkit-linear-gradient(#e4cfa6, #fff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 2.5em;
+                font-weight: 700;
+                margin-bottom: 0.5em;
+            }
+            
+            .quemsomos .conteudo .titulo p {
+                color: #fff;
+                font-size: 1.1em;
+                font-weight: 500;
+            }
+            
+            /* Perguntas Frequentes */
+            
+            .perguntas {
+                background-color: #000;
+                padding: 6em 1em;
+            }
+            
+            .perguntas .conteudo .titulo h3 {
+                background: -webkit-linear-gradient(#e4cfa6, #fff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 2.5em;
+                font-weight: 700;
+                margin-bottom: 1em;
+                text-align: center;
+            }
+            
+            .perguntas .conteudo .items {
+                margin: 0 auto;
+                max-width: 800px;
+            }
+            
+            .perguntas .conteudo .items .item {
+                border-bottom: 1px solid #fff;
+                margin-bottom: 1em;
+                padding: 1em 0em;
+            }
+            
+            .perguntas .conteudo .items .item .pergunta {
+                align-items: center;
+                cursor: pointer;
+                display: flex;
+                gap: 20px;
+                justify-content: space-between;
+            }
+            
+            .perguntas .conteudo .items .item .pergunta h3 {
+                color: #fff;
+                font-size: 1.25em;
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+            
+            .perguntas .conteudo .items .item .pergunta svg {
+                color: #fff;
+                font-size: 1em;
+            }
+            
+            .perguntas .conteudo .items .item .resposta {
+                display: none;
+                padding-top: 1em;
+            }
 
-        .timeline-center {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: var(--bg-color);
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            font-weight: 800;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 1rem 0;
-            box-shadow: 0 0 15px rgba(198, 174, 132, 0.2);
-            flex-shrink: 0;
-        }
-        
-        .timeline-content {
-            width: 100%;
-            padding: 1.5rem;
-            background: var(--surface-color);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
-            display: flex;
-            flex-direction: column;
-        }
-        @media (min-width: 768px) {
-            .timeline-content { width: 45%; }
-        }
-        
-        .timeline-content h4 { color: var(--primary); margin-bottom: 0.5rem; font-size: 1.1rem; }
-        .timeline-content p { margin: 0; font-size: 0.95rem; }
+            .perguntas .conteudo .items .item.aberto .resposta {
+                display: block;
+            }
+            
+            .perguntas .conteudo .items .item .resposta p {
+                color: #fff;
+            }
+            
+            .perguntas .conteudo .botao {
+                display: grid;
+                justify-content: center;
+            }
+            
+            .perguntas .conteudo .botao p {
+                color: #fff;
+                font-size: 1.75em;
+                font-weight: 600;
+                margin-top: 1.5em;
+                text-align: center;
+            }
+            
+            .perguntas .conteudo .botao a {
+                background: #E4CFA6;
+                background: linear-gradient(90deg, rgba(228, 207, 166, 1) 50%, rgba(255, 255, 255, 1) 100%);
+                border: 1px solid #fff;
+                border-radius: 50px;
+                box-shadow: rgba(228, 207, 166, 0.5) 0px 7px 29px 0px;
+                color: #000;
+                font-weight: 400;
+                margin: 0 auto;
+                padding: 15px 35px;
+                text-decoration: none;
+                width: fit-content;
+            }
+            
+            /* Transformação */
+            
+            .transformacao {
+                background-color: #000;
+                padding: 4em 1em;
+            }
+            
+            .transformacao .conteudo .titulo h3 {
+                background: -webkit-linear-gradient(#e4cfa6, #fff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 2.5em;
+                font-weight: 700;
+                margin-bottom: 1em;
+                text-align: center;
+            }
+            
+            .transformacao .conteudo .items {
+                display: flex;
+                gap: 25px;
+                justify-content: center;
+                margin-bottom: 2em;
+            }
+            
+            .transformacao .conteudo .items .item p {
+                color: #fff;
+                font-weight: 500;
+            }
+            
+            .transformacao .conteudo .items .item p i {
+                margin-right: 20px;
+            }
+            
+            .transformacao .conteudo .botao {
+                display: grid;
+                justiy-content: center;
+            }
+            
+            .transformacao .conteudo .botao a {
+                background: #E4CFA6;
+                background: linear-gradient(90deg, rgba(228, 207, 166, 1) 50%, rgba(255, 255, 255, 1) 100%);
+                border: 1px solid #fff;
+                border-radius: 50px;
+                box-shadow: rgba(228, 207, 166, 0.5) 0px 7px 29px 0px;
+                color: #000;
+                font-weight: 400;
+                margin: 0 auto;
+                padding: 15px 35px;
+                text-decoration: none;
+                width: fit-content;
+            }
+            
+            /* Rodapé */
+            
+            footer {
+                background-color: #000;
+                padding: 4em 1em;
+            }
+            
+            footer .conteudo .topo {
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            footer .conteudo .topo .logo img {
+                width: 150px;
+            }
+            
+            footer .conteudo .topo .contato {
+                display: flex;
+                gap: 20px;
+            }
+            
+            footer .conteudo .topo .contato a {
+                color: #fff;
+                text-decoration: none;
+            }
+            
+            footer .conteudo .topo .contato a svg {
+                font-size: 0.9em;
+            }
+            
+            footer .conteudo .topo .mapa iframe {
+                height: 300px;
+                width: 500px;
+            }
+            
+            footer .conteudo .base .copyright {
+                border-top: 1px solid rgba(255, 255, 255, 0.5);
+                color: #fff;
+                font-size: 0.8em;
+                margin-top: 4em;
+                padding-top: 4em;
+                text-align: center;
+            }
+            
+            /* Botão */
+            
+            .botaoFlutuante {
+                position: fixed;
+                bottom: 10;
+                right: 10;
+                z-index: 999999;
+            }
+            
+            .botaoFlutuante img {
+                width: 75px;
+            }
+            
+            /* Responsivo */
+            
+            @media(max-width: 768px) {
 
-        /* --- ABOUT --- */
-        .about-section {
-            background: linear-gradient(180deg, var(--bg-color) 0%, var(--bg-secondary) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        .about-section::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 1px;
-            background: linear-gradient(90deg, transparent, var(--border-color), transparent);
-        }
-
-        .about-wrapper {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .about-text p {
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-            color: #D1D5DB;
-        }
-
-        /* --- BONUS & FAQ --- */
-        .bonus-card {
-            border: 1px solid var(--border-color);
-            background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, transparent 100%);
-            border-radius: var(--radius-lg);
-            padding: 2rem;
-            text-align: center;
-        }
-        .bonus-card h4 { color: var(--text-color); font-size: 1.1rem; }
-        .bonus-card h5 { color: var(--primary); font-size: 1.25rem; margin-bottom: 1rem; }
-
-        .accordion-item {
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
-            margin-bottom: 1rem;
-            background: rgba(255,255,255,0.01);
-            overflow: hidden;
-            transition: 0.3s;
-        }
-        .accordion-item:hover { border-color: rgba(255,255,255,0.1); }
-        
-        .accordion-button {
-            width: 100%;
-            padding: 1.5rem;
-            background: none;
-            border: none;
-            text-align: left;
-            font-family: var(--font-main);
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text-heading);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            padding: 0 1.5rem;
-        }
-        .accordion-content p { padding-bottom: 1.5rem; }
-        .accordion-item.active { background: rgba(255,255,255,0.03); border-color: var(--border-hover); }
-
-        /* --- CHECKOUT --- */
-        .checkout-container {
-            position: relative;
-            padding: 4rem 2rem;
-            border-radius: var(--radius-lg);
-            background: linear-gradient(145deg, rgba(15,22,35,0.9), rgba(7,10,15,0.95));
-            border: 1px solid var(--primary);
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-            box-shadow: 0 0 60px -20px rgba(198, 174, 132, 0.15);
-        }
-
-        .price-display {
-            font-size: 4.5rem;
-            font-weight: 800;
-            color: var(--text-heading);
-            line-height: 1;
-            margin: 1.5rem 0;
-            letter-spacing: -2px;
-        }
-        
-        .checkout-btn {
-            height: 64px;
-            font-size: 1.1rem;
-            max-width: 320px;
-            margin: 0 auto;
-            display: flex;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            border-top: 1px solid var(--border-color);
-            padding: 3rem 0;
-            background: var(--bg-color);
-        }
-        
-        .disclaimer {
-            font-size: 0.75rem;
-            line-height: 1.4;
-            color: #4B5563;
-        }
-        
-        .footer-links a {
-            font-size: 0.8rem;
-            color: #6B7280;
-        }
-        .footer-links a:hover { color: var(--primary); }
-
-        /* Helpers */
-        svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-
-    </style>
-<link rel="stylesheet" href="/index.css">
-  <script type="module" crossorigin src="/assets/index-B5Qt9EMX.js"></script>
-</head>
-<body>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1984155249176139&ev=PageView&noscript=1"
-    /></noscript>
-
-    <!-- HEADER -->
-    <header>
-        <div class="header-content">
-            <div class="logo">Escritório Digital sem Agência</div>
-            <nav>
-                <ul>
-                    <li><a href="#conteudo">O Kit</a></li>
-                    <li><a href="#plano">Plano 7 Dias</a></li>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#bonus">Bônus</a></li>
-                </ul>
-            </nav>
-            <div class="header-cta">
-                <a href="#checkout" class="btn" style="padding: 0.6rem 1.5rem; font-size: 0.9rem;">
-                    Começar
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <!-- HERO -->
-        <section id="hero" class="hero">
-            <div class="glow-spot"></div>
-            <div class="container" style="position: relative; z-index: 2;">
-                <div class="hero-badge">EXCLUSIVO PARA ADVOGADOS</div>
-                <h1>A nova era da advocacia digital começa com um sistema simples.</h1>
-                <p class="hero-sub">Tese, anúncios e WhatsApp prontos em 7 dias. Um kit copiável, onde você escolhe a tese, o anúncio, replica as mensagens e fecha a reunião no automático.</p>
-
-                <div class="hero-bullets">
-                    <div class="pill-tag"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Framework de Tese</div>
-                    <div class="pill-tag"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Anúncios conforme regras OAB</div>
-                    <div class="pill-tag"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Scripts de WhatsApp</div>
-                    <div class="pill-tag"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Roteiro de Reunião</div>
-                </div>
-
-                <div class="flex flex-col items-center gap-2" style="max-width: 350px; margin: 0 auto;">
-                    <a href="#audience" class="btn">Iniciar Prospecção</a>
-                    <a href="#conteudo" class="btn btn-secondary">Ver o que vem dentro</a>
-                </div>
-
-                <div class="trust-strip">
-                    <span>⚡ Acesso imediato</span>
-                    <span>🔒 Garantia de Satisfação</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- AUDIENCE (White Theme) -->
-        <section id="audience" class="section-padding">
-            <div class="container">
-                <div class="grid grid-2">
-                    <div class="white-card green-theme">
-                        <h3 style="margin-bottom: 2rem;">É pra você se...</h3>
-                        <ul class="check-list">
-                            <li>
-                                <svg style="color:var(--primary)" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                <span>Quer autonomia para testar teses sem depender de agência cara agora.</span>
-                            </li>
-                            <li>
-                                <svg style="color:var(--primary)" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                <span>Precisa de velocidade: quer colocar uma campanha no ar na próxima semana.</span>
-                            </li>
-                            <li>
-                                <svg style="color:var(--primary)" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                <span>Já entendeu que lead sem atendimento rápido e roteirizado não vira cliente.</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="white-card red-theme">
-                        <h3 style="margin-bottom: 2rem;">Não é pra você se...</h3>
-                        <ul class="check-list">
-                            <li>
-                                <svg style="color:#ef4444" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                                <span>Busca um serviço personalizado onde terceiriza toda a responsabilidade.</span>
-                            </li>
-                            <li>
-                                <svg style="color:#ef4444" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                                <span>Acredita em "robôs de pix" ou promessas de clientes caindo do céu sem esforço.</span>
-                            </li>
-                            <li>
-                                <svg style="color:#ef4444" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                                <span>Não está disposto a dedicar 1 hora por dia durante 7 dias para implementar.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTEÚDO (Bento Grid Style - SYMMETRIC) -->
-        <section id="conteudo" class="section-padding">
-            <div class="container">
-                <div class="text-center" style="margin-bottom: 4rem;">
-                    <h2>O que você recebe no Kit</h2>
-                    <p style="font-size: 1.1rem; color: var(--primary);">Um sistema copiável para sair do improviso e ganhar consistência.</p>
-                </div>
-
-                <div class="cards-grid">
-                    <!-- Card 1 -->
-                    <div class="content-card">
-                        <div class="icon-box">
-                            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                        </div>
-                        <h4>1. Framework de Tese</h4>
-                        <p>Como escolher uma tese com demanda real e baixo risco de reprovação ou ruído.</p>
-                        <div class="card-result">Sai com: Tese definida.</div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="content-card">
-                        <div class="icon-box">
-                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        </div>
-                        <h4>2. Prompt-Mestre</h4>
-                        <p>Comando pronto para IA gerar headlines e ângulos infinitos.</p>
-                        <div class="card-result">10 headlines prontas.</div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="content-card">
-                        <div class="icon-box">
-                            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-                        </div>
-                        <h4>3. Pacote Anúncio</h4>
-                        <p>Templates visuais sóbrios e instruções diretas de design.</p>
-                        <div class="card-result">3 templates editáveis.</div>
-                    </div>
-
-                    <!-- Card 4 -->
-                    <div class="content-card">
-                        <div class="icon-box">
-                            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                        </div>
-                        <h4>4. Checklist Regras OAB</h4>
-                        <p>Guia prático de pode/não pode para publicidade ética.</p>
-                        <div class="card-result">Guia de conformidade.</div>
-                    </div>
-
-                    <!-- Card 5 -->
-                    <div class="content-card">
-                        <div class="icon-box">
-                            <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                        </div>
-                        <h4>5. Script WhatsApp</h4>
-                        <p>Scripts de 1ª resposta e qualificação de leads.</p>
-                        <div class="card-result">Fluxo completo.</div>
-                    </div>
-
-                    <!-- Card 6 -->
-                    <div class="content-card">
-                        <div class="icon-box">
-                            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                        </div>
-                        <h4>6. Script Reunião & KPIs</h4>
-                        <p>Roteiro de vendas consultivas e planilha de controle.</p>
-                        <div class="card-result">Fechamento & Controle.</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PLANO 7 DIAS (Clean Timeline) -->
-        <section id="plano" class="section-padding" style="background: var(--bg-secondary);">
-            <div class="container">
-                <div class="text-center" style="margin-bottom: 4rem;">
-                    <h2>O Plano de Execução</h2>
-                    <p>Um passo lógico por dia. Sem sobrecarga.</p>
-                </div>
-
-                <div class="timeline-wrapper">
-                    <!-- Day 1 -->
-                    <div class="timeline-row">
-                        <div class="timeline-spacer"></div>
-                        <div class="timeline-center">1</div>
-                        <div class="timeline-content">
-                            <h4>Dia 1</h4>
-                            <p>Escolha da Tese + Checklist</p>
-                        </div>
-                    </div>
-                    <!-- Day 2 -->
-                    <div class="timeline-row">
-                        <div class="timeline-spacer"></div>
-                        <div class="timeline-center">2</div>
-                        <div class="timeline-content">
-                            <h4>Dia 2</h4>
-                            <p>Ângulos e Headlines</p>
-                        </div>
-                    </div>
-                    <!-- Day 3 -->
-                    <div class="timeline-row">
-                        <div class="timeline-spacer"></div>
-                        <div class="timeline-center">3</div>
-                        <div class="timeline-content">
-                            <h4>Dia 3</h4>
-                            <p>Montagem de 3 Criativos</p>
-                        </div>
-                    </div>
-                    <!-- Day 4 -->
-                    <div class="timeline-row">
-                        <div class="timeline-spacer"></div>
-                        <div class="timeline-center">4</div>
-                        <div class="timeline-content">
-                            <h4>Dia 4</h4>
-                            <p>Prep Anúncio</p>
-                        </div>
-                    </div>
-                    <!-- Day 5 -->
-                    <div class="timeline-row">
-                        <div class="timeline-spacer"></div>
-                        <div class="timeline-center">5</div>
-                        <div class="timeline-content">
-                            <h4>Dia 5</h4>
-                            <p>Configurar WhatsApp</p>
-                        </div>
-                    </div>
-                     <!-- Day 6 -->
-                     <div class="timeline-row">
-                        <div class="timeline-spacer"></div>
-                        <div class="timeline-center">6</div>
-                        <div class="timeline-content">
-                            <h4>Dia 6</h4>
-                            <p>Treino de Follow Up</p>
-                        </div>
-                    </div>
-                     <!-- Day 7 -->
-                     <div class="timeline-row">
-                        <div class="timeline-spacer"></div>
-                        <div class="timeline-center">7</div>
-                        <div class="timeline-content">
-                            <h4>Dia 7</h4>
-                            <p>Script Reunião e KPIs</p>
-                        </div>
-                    </div>
-                    <!-- Day 8 -->
-                    <div class="timeline-row">
-                        <div class="timeline-spacer"></div>
-                        <div class="timeline-center" style="border-color: #60A5FA; color: #60A5FA;">8</div>
-                        <div class="timeline-content" style="border-color: #60A5FA; background: rgba(96, 165, 250, 0.05);">
-                            <h4 style="color: #60A5FA;">Dia 8 - Bônus Limitado</h4>
-                            <p>Reunião com especialista para análise, diagnóstico e consultoria de negócio sem custo.</p>
-                            <span style="display: block; margin-top: 0.5rem; font-size: 0.8rem; color: #93C5FD; font-weight: 600;">⚠️ Limitado a 10 pessoas no mês de fevereiro</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center" style="margin-top: 4rem;">
-                    <a href="#metodo" class="btn">Quero seguir este plano</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- WHY IT WORKS (Grid) -->
-        <section id="metodo" class="section-padding">
-            <div class="container">
-                <div class="text-center" style="margin-bottom: 4rem;">
-                    <h2>Por que este kit funciona?</h2>
-                </div>
-                <div class="grid grid-3">
-                    <div class="glass-card text-center">
-                        <div class="icon-box" style="margin: 0 auto 1.5rem;">
-                            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                        </div>
-                        <h4>Método Lógico</h4>
-                        <p>Elimina a paralisia por análise. Você só executa o passo do dia.</p>
-                    </div>
-                    <div class="glass-card text-center">
-                        <div class="icon-box" style="margin: 0 auto 1.5rem;">
-                            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
-                        </div>
-                        <h4>Modelos Validados</h4>
-                        <p>Não comece do zero. Use estruturas que funcionam no mercado jurídico.</p>
-                    </div>
-                    <div class="glass-card text-center">
-                        <div class="icon-box" style="margin: 0 auto 1.5rem;">
-                            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                        </div>
-                        <h4>Checklists</h4>
-                        <p>Reduza o erro humano e o risco ético com verificações passo a passo.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ABOUT -->
-        <section id="about" class="section-padding about-section">
-            <div class="container">
-                <div class="about-wrapper text-center">
-                    <h2 style="margin-bottom: 3rem;">Sobre a Rowp Tech & Sales</h2>
-                    <div class="about-text text-left" style="text-align: left;">
-                        <p>Depois de acompanhar mais de 150 escritórios, a conclusão foi simples: a maioria não precisa de uma agência cara. Precisa de processo.</p>
-                        <p>Foram diversos gargalos mapeados em diferentes operações, e um ponto ficou evidente. Muitas agências cobram mensalidades insustentáveis para executar tarefas que hoje podem ser feitas com método, templates e inteligência artificial, pelo próprio advogado ou por um estagiário bem treinado.</p>
-                        <p>Nossa missão é digitalizar e dar previsibilidade ao crescimento dos escritórios, com estrutura, sobriedade e execução simples. Este produto existe para colocar o básico bem feito na sua mão. Você ganha autonomia para entender, delegar e rodar um processo enxuto sem ficar refém de terceiros.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- BONUS -->
-        <section id="bonus" class="section-padding">
-            <div class="container">
-                <div class="text-center" style="margin-bottom: 3rem;">
-                    <span class="text-primary" style="font-weight: 700; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.05em;">Oferta Limitada</span>
-                    <h2>3 Bônus Exclusivos</h2>
-                </div>
-                <div class="grid grid-3">
-                    <div class="bonus-card">
-                        <h5>Bônus 1</h5>
-                        <h4>Banco de Respostas Prontas</h4>
-                        <p class="text-center" style="font-size: 0.9rem; margin-top: 0.5rem;">Para as objeções comuns no WhatsApp (preço, garantia, sócio).</p>
-                    </div>
-                    <div class="bonus-card">
-                        <h5>Bônus 2</h5>
-                        <h4>Modelo de Briefing</h4>
-                        <p class="text-center" style="font-size: 0.9rem; margin-top: 0.5rem;">Documento para solicitar artes perfeitas a designers freelancers.</p>
-                    </div>
-                    <div class="bonus-card">
-                        <h5>Bônus 3</h5>
-                        <h4>Checklist de Risco</h4>
-                        <p class="text-center" style="font-size: 0.9rem; margin-top: 0.5rem;">Revisão conforme as regras da OAB para qualquer material antes de publicar.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- GARANTIA -->
-        <section id="garantia" class="section-padding">
-            <div class="container">
-                <div class="glass-card text-center" style="max-width: 700px; margin: 0 auto;">
-                    <div class="icon-box" style="margin: 0 auto 1.5rem; border-radius: 50%;">
-                        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                    </div>
-                    <h3>Garantia Blindada de Risco Zero</h3>
-                    <p style="font-size: 1.1rem; color: var(--text-color);">Se não fizer sentido pra você, devolvemos seu investimento integralmente. O risco é todo nosso.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- CHECKOUT -->
-        <section id="checkout" class="section-padding">
-            <div class="container">
-                <div class="checkout-container">
-                    <h3>Leve o Escritório Digital sem Agência</h3>
-                    <div class="price-display">R$97</div>
-                    <div style="color: var(--primary); font-weight: 500; margin-bottom: 2rem;">Pagamento único • Acesso vitalício</div>
-                    
-                    <ul class="check-list" style="text-align: left; margin: 0 auto 2.5rem; max-width: 450px; display: inline-block;">
-                        <li><svg style="color:var(--primary)" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Framework de Teses para o Digital</li>
-                        <li><svg style="color:var(--primary)" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Todos os prompts para a IA fazer o trabalho pesado</li>
-                        <li><svg style="color:var(--primary)" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Acesso a Anúncios que Venderam +2000 contratos</li>
-                        <li><svg style="color:var(--primary)" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Configurando o Tráfego em 1 minuto</li>
-                        <li><svg style="color:var(--primary)" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Scripts de WhatsApp & Reunião</li>
-                        <li><svg style="color:var(--primary)" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> <strong>Bônus:</strong> Banco de Objeções</li>
-                        <li><svg style="color:var(--primary)" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> <strong>Bônus:</strong> Briefing Designer</li>
-                    </ul>
-
-                    <a href="https://pay.kiwify.com.br/11aant4" class="btn checkout-btn">Quero Começar</a>
-                    
-                    <div class="trust-strip" style="justify-content: center; margin-top: 2rem;">
-                        <span>🔒 Compra Segura</span>
-                        <span>⚡ Entrega Imediata</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ -->
-        <section id="faq" class="section-padding">
-            <div class="container" style="max-width: 800px;">
-                <h2 class="text-center" style="margin-bottom: 3rem;">Perguntas Frequentes</h2>
-                
-                <div class="accordion">
-                    <div class="accordion-item">
-                        <button class="accordion-button">
-                            Serve pra minha área de atuação?
-                            <svg class="accordion-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Sim. O framework de tese e os scripts são agnósticos. Eles ensinam a estrutura de persuasão e conformidade, que você preenche com o conteúdo técnico da sua área.</p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <button class="accordion-button">
-                            Preciso já estar anunciando?
-                            <svg class="accordion-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Não. O kit é também o passo anterior aos anúncios: é a preparação do terreno (tese, criativo e atendimento) para que, quando você anunciar, não jogue dinheiro fora.</p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <button class="accordion-button">
-                            Isso fere o código de ética da OAB?
-                            <svg class="accordion-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="accordion-content">
-                            <p>O material é alinhado a diretrizes de publicidade e informação na advocacia (inclui referência ao Provimento 205/2021). A responsabilidade final é do advogado.</p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <button class="accordion-button">
-                            Quanto tempo preciso dedicar?
-                            <svg class="accordion-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="accordion-content">
-                            <p>O plano de 7 dias sugere cerca de 45 a 60 minutos por dia. O objetivo é ser rápido e prático.</p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <button class="accordion-button">
-                            Vou precisar contratar um designer?
-                            <svg class="accordion-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Não necessariamente. Os templates são simples. Se você quiser contratar, incluímos um modelo de briefing para facilitar.</p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <button class="accordion-button">
-                            Como recebo o acesso?
-                            <svg class="accordion-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Imediatamente após a confirmação do pagamento, você recebe um e-mail com o link para a área de membros.</p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <button class="accordion-button">
-                            E se eu não gostar?
-                            <svg class="accordion-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Você tem 7 dias de garantia incondicional. Basta enviar um e-mail e reembolsamos 100% do valor.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="flex flex-col items-center gap-4">
-                <div class="logo">Rowp Tech: Soluções Digitais para Advogados</div>
-                <div class="flex gap-4 text-center footer-links">
-                    <a href="#">Termos de Uso</a>
-                    <a href="#">Política de Privacidade</a>
-                    <a href="https://wa.me/19981900118" target="_blank">Contato</a>
-                </div>
-            </div>
-
-            <div class="disclaimer text-center" style="margin-top: 2rem;">
-                <p><strong>Aviso Importante:</strong> Os resultados variam. Este produto não garante a obtenção de clientes, faturamento específico ou êxito em processos. O material é estritamente educacional. O advogado é o responsável pelo teor final de suas publicações e pela observância do Código de Ética.</p>
-                <p style="margin-top: 1rem;">&copy; <span id="year">2026</span> ROWP. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JS -->
-    <script>
-        // Update Year
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // FAQ Accordion Logic
-        document.querySelectorAll('.accordion-button').forEach(button => {
-            button.addEventListener('click', () => {
-                const accordionItem = button.parentElement;
-                const content = button.nextElementSibling;
-                const icon = button.querySelector('.accordion-icon');
-                
-                // Toggle active class
-                accordionItem.classList.toggle('active');
-
-                // Toggle logic for height
-                if (accordionItem.classList.contains('active')) {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                    icon.style.transform = "rotate(180deg)";
-                } else {
-                    content.style.maxHeight = null;
-                    icon.style.transform = "rotate(0deg)";
+                section {
+                    padding: 2em 1em !important;
                 }
-            });
-        });
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
                 
-                if (targetElement) {
-                    const headerOffset = 100;
-                    const elementPosition = targetElement.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-    
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: "smooth"
-                    });
+                /* Principal */
+                
+                .principal .conteudo, .crescer .conteudo .items, .escritorio .conteudo .items, .resultados .conteudo .items, .formulario .conteudo , .quemsomos .conteudo {
+                    grid-template-columns: 1fr;
                 }
+                
+                .principal .conteudo .imagem .desktop {
+                    display: none;
+                }
+                
+                .principal .conteudo .imagem .mobile {
+                    display: block;
+                }
+                
+                .principal .conteudo .imagem img {
+                    width: 100%;
+                }
+                
+                .transformacao .conteudo .items {
+                    display: grid;
+                }
+                
+                .quemsomos .conteudo .imagem img {
+                    width: 100%;
+                }
+                
+                footer .conteudo .topo, footer .conteudo .topo .logo, footer .conteudo .topo .contato {
+                    display: grid;
+                    justify-content: center;
+                }
+                
+                footer .conteudo .topo .contato {
+                    gap: 10px;
+                    margin-top: 2em;
+                }
+                
+                footer .conteudo .topo .contato a {
+                    text-align: center;
+                }
+                
+                footer .conteudo .topo .mapa iframe {
+                    height:;
+                    margin-top: 2em;
+                    width: 100%;
+                }
+                
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+        
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9DWG6LV"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        
+        <!-- Principal -->
+        <section class="principal">
+            <div class="wrapper">
+                <div class="conteudo">
+                    <div class="texto">
+                        <!--<div class="logo">
+                            <img src="imagens/logo.png">
+                        </div>-->
+                        <div class="titulo">
+                            <img src="imagens/logoff.webp">
+                            <h3>Conheça a solução usada pelos maiores advogados para atrair mais clientes todos os meses!</h3>
+                            <p>Descubra como podemos multiplicar a quantidade de clientes qualificados de maneira previsível gerando mais reconhecimento, liberdade e lucro para os sócios do escritório.<br><br>A Metodologia Growth Rowp Law ou GRL, implementada em mais de 150 escritórios nos últimos 4 anos, é 100% adequada às diretrizes éticas da OAB.</p>
+                        </div>
+                        <div class="botao">
+                            <a href="#formulario">Cadastre-se Agora</a>
+                        </div>
+                    </div>
+                    <div class="imagem">
+                        <img src="imagens/principaff.webp">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Crescer -->
+        <section class="crescer">
+            <div class="wrapper">
+                <div class="conteudo">
+                    <div class="titulo">
+                        <h3>Como faremos seu escritório crescer</h3>
+                    </div>
+                    <div class="items">
+                        <div class="item">
+                            <div class="icone">
+                                <img src="imagens/icone-atracao.svg">
+                            </div>
+                            <div class="info">
+                                <h3>Atração</h3>
+                                <p>Estratégias para atrair clientes certos<br> para seu escritório.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icone">
+                                <img src="imagens/icone-funil.svg">
+                            </div>
+                            <div class="info">
+                                <h3>Funil de Aquisição</h3>
+                                <p>Conteúdo estratégico para<br> qualificar leads.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icone">
+                                <img src="imagens/icone-engajamento.svg">
+                            </div>
+                            <div class="info">
+                                <h3>Conversão</h3>
+                                <p>Transformação de leads<br> em clientes reais.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icone">
+                                <img src="imagens/icone-trackeamento.svg">
+                            </div>
+                            <div class="info">
+                                <h3>Crescimento</h3>
+                                <p>Multiplicação das estratégias para<br> expansão sustentável do seu escritório.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="botao">
+                        <a href="#formulario">Cadastre-se Agora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Escritório -->
+        <section class="escritorio">
+            <div class="wrapper">
+                <div class="conteudo">
+                    <div class="titulo">
+                        <h3>O que podemos fazer pelo seu escritório?</h3>
+                    </div>
+                    <div class="items">
+                        <div class="item">
+                            <div class="icone">
+                                <img src="imagens/icone-trafego.svg">
+                            </div>
+                            <div class="info">
+                                <h3>Tráfego Pago para Advogados</h3>
+                                <p>Estratégias avançadas de Google Ads, Facebook Ads, Tik Tok Ads para captação de clientes qualificados.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icone">
+                                <img src="imagens/icone-redes.svg">
+                            </div>
+                            <div class="info">
+                                <h3>Gestão de Redes Sociais</h3>
+                                <p>Atrair e engajar clientes com conteúdos relevantes e estratégicos.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icone">
+                                <img src="imagens/icone-desenvolvimento.svg">
+                            </div>
+                            <div class="info">
+                                <h3>Desenvolvimento de Sites Jurídicos</h3>
+                                <p>Sites profissionais, responsivos e otimizados para converter visitantes em clientes reais.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icone">
+                                <img src="imagens/icone-automacao.svg">
+                            </div>
+                            <div class="info">
+                                <h3>Automação com Inteligência Artificial</h3>
+                                <p>Transforme contatos em consultas agendadas com atendimento humanizado operado integralmente por Inteligência Artificial.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="botao">
+                        <p>Quer entender como podemos transformar o seu escritório?</p>
+                        <a href="#formulario">Cadastre-se Agora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Resultados -->
+        <section class="resultados">
+            <div class="wrapper">
+                <div class="conteudo">
+                    <div class="titulo">
+                        <h3>Resultados Comprovados</h3>
+                        <p>Veja como ajudamos outros escritórios a crescer:</p>
+                    </div>
+                    <div class="items">
+                        <div class="item">
+                            <img src="imagens/MFF-Logo-transparente.webp">
+                            <h3>MFF Advocacia</h3>
+                            <p>Do faturamento inicial de 0 a 280 mil reais com contratos trabalhistas em 2 meses.</p>
+                        </div>
+                        <div class="item">
+                            <img src="imagens/olavo.webp">
+                            <h3>Olavo Filho Advocacia</h3>
+                            <p>273 Leads gerados com custo médio de R$ 4,34, em apenas 30 dias.</p>
+                        </div>
+                        <div class="item">
+                            <img src="imagens/silmara.webp">
+                            <h3>SA Advogados Associados</h3>
+                            <p>18 contratos fechados na primeira semana de parceira.</p>
+                        </div>
+                    </div>
+                    <div class="botao">
+                        <p>Seu escritório pode ser o próximo case de sucesso!</p>
+                        <a href="#formulario">Cadastre-se Agora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Formulário -->
+        <section class="formulario" id="formulario">
+            <div class="wrapper">
+                <div class="conteudo">
+                    <div class="modulos">
+                        <div class="passo">
+                            <div class="icone"></div>
+                            <div class="texto">
+                                <h3>Preencha o formulário</h3>
+                                <p>Envie suas informações de contato. Todos os seus dados estarão seguros, vamos cuidar bem deles.</p>
+                            </div>
+                        </div>
+                        <div class="icone">
+                            <i data-feather="chevron-down"></i>
+                        </div>
+                        <div class="passo">
+                            <div class="icone"></div>
+                            <div class="texto">
+                                <h3>Receba uma ligação</h3>
+                                <p>Em até 12 horas, um dos nossos especialistas fará uma ligação para agendar a reunião mais importante com você.</p>
+                            </div>
+                        </div>
+                        <div class="icone">
+                            <i data-feather="chevron-down"></i>
+                        </div>
+                        <div class="passo">
+                            <div class="icone"></div>
+                            <div class="texto">
+                                <h3>Reunião Estratégica</h3>
+                                <p>A Reunião Estratégica é online, personalizada e <b>sem custos.</b></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contato">
+                        <div class="campos">
+                            <form method="post" action="contato.php">
+                                <div class="passo" data-passo="1">
+                                    <div class="campo">
+                                        <input type="text" name="nome" placeholder="Nome" class="nome">
+                                    </div>
+                                    <div class="campo">
+                                        <input type="tel" name="telefone" placeholder="Telefone" class="telefone">
+                                    </div>
+                                    <div class="campo">
+                                        <input type="mail" name="email" placeholder="E-mail" class="email">
+                                    </div>
+                                    <div class="campo">
+                                        <button type="button" data-proximo="2">Próximo</button>
+                                    </div>
+                                </div>
+                                <div class="passo esconde" data-passo="2">
+                                    <div class="campo">
+                                        <label for="nome_empresa">Como se chama sua empresa ou negócio?</label>
+                                        <input type="text" name="nome_empresa" class="nome_empresa">
+                                    </div>
+                                    <div class="campo">
+                                        <label for="instagram_empresa">Qual instagram da sua empresa ou negócio? *</label>
+                                        <input type="text" name="instagram_empresa" class="instagram_empresa">
+                                    </div>
+                                    <div class="campo">
+                                        <label for="cenario">Nos conte um pouco a respeito do seu negócio e o atual cenário dele hoje, em relação ao marketing.</label>
+                                        <textarea name="cenario" rows="5" class="cenario "></textarea>
+                                    </div>
+                                    <div class="campo">
+                                        <button type="button" data-proximo="3">Próximo</button>
+                                    </div>
+                                </div>
+                                <div class="passo esconde" data-passo="3">
+                                    <div class="campo">
+                                        <label for="experiencia">Você já teve experiência com alguma empresa de marketing? *</label>
+                                        <select name="experiencia" class="experiencia">
+                                            <option value="Sim" class="preto">Sim</option>
+                                            <option value="Não" class="preto">Não</option>
+                                            <option value="Trabalho com uma hoje" class="preto">Trabalho com uma hoje</option>
+                                        </select>
+                                    </div>
+                                    <div class="campo">
+                                        <label for="faturamento">Qual sua média de faturamento mensal aproximadamente? *</label>
+                                        <select name="faturamento" class="faturamento">
+                                            <option value="Até R$15.000" class="preto">Até R$15.000</option>
+                                            <option value="R$15 mil - R$30 mil" class="preto">R$15 mil - R$30 mil</option>
+                                            <option value="R$30 mil - R$70 mil" class="preto">R$30 mil - R$70 mil</option>
+                                            <option value="R$70 mil - R$100 mil" class="preto">R$70 mil - R$100 mil</option>
+                                            <option value="Acima de R$100 mil" class="preto">Acima de R$100 mil</option>
+                                        </select>
+                                    </div>
+                                    <div class="campo">
+                                        <label for="urgencia">Qual seu nível de urgência para implementar o método GRL na sua empresa e colher os frutos? *</label>
+                                        <select name="urgencia" class="urgencia">
+                                            <option value="Essa semana/na outra" class="preto">Essa semana/na outra</option>
+                                            <option value="De 1 a 3 meses" class="preto">De 1 a 3 meses</option>
+                                            <option value="Acima de 3 meses" class="preto">Acima de 3 meses</option>
+                                        </select>
+                                    </div>
+                                    <div class="campo">
+                                        <label for="investimento">O investimento mínimo começa a partir de R$ 1.600 mil - R$ 4.700 mil/mês, para ter possíveis clientes todos os dias te procurando, deixar sua marca mais reconhecida, trazer mais vendas entre outras coisas que você busca, esse investimento hoje faz sentido para você nesse momento? *</label>
+                                        <select name="investimento" class="investimento">
+                                            <option value="Sim" class="preto">Sim</option>
+                                            <option value="Não" class="preto">Não</option>
+                                            <option value="Preciso entender" class="preto">Preciso entender</option>
+                                        </select>
+                                    </div>
+                                    <div class="campo">
+                                        <button type="button" class="enviarInformacoes">Enviar Informações</button>
+                                        <p>Em breve entraremos em contato com você!</p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quem Somos -->
+        <section class="quemsomos">
+            <div class="wrapper">
+                <div class="conteudo">
+                    <div class="imagem">
+                        <img src="imagens/Rowp-logo-transparente.webp">
+                    </div>
+                    <div class="titulo">
+                        <h3>Quem Somos</h3>
+                        <p>Na Rowp. Tech & Sales, nossa missão é digitalizar e multiplicar o número de bons clientes para escritórios de advocacia, otimizando sua operação e elevando seu reconhecimento e faturamento. Valorizamos excelência e personalização, aplicando estratégias validadas para garantir resultados superiores. Com soluções que otimizam processos e melhoram a presença online, queremos ser seu parceiro na sua transformação e sucesso no mercado jurídico. Juntos, podemos superar desafios e alcançar novos patamares.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Perguntas Frequentes -->
+        <section class="perguntas">
+            <div class="wrapper">
+                <div class="conteudo">
+                    <div class="titulo">
+                        <h3>Perguntas Frequentes</h3>
+                    </div>
+                    <div class="items">
+                        <div class="item">
+                            <div class="pergunta">
+                                <h3>Como funciona a metodologia da Rowp Tech?</h3>
+                                <i data-feather="plus"></i>
+                            </div>
+                            <div class="resposta">
+                                <p>Nossa metodologia segue um processo estratégico em 6 etapas, desde a estruturação da presença digital do seu escritório até a conversão de leads em clientes. Realizamos análises de mercado, otimizamos campanhas e aplicamos as melhores práticas de marketing jurídico para gerar previsibilidade no crescimento do seu escritório.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pergunta">
+                                <h3>Em quanto tempo vejo resultados?</h3>
+                                <i data-feather="plus"></i>
+                            </div>
+                            <div class="resposta">
+                                <p>O tempo pode variar conforme o serviço contratado e o estágio atual do seu escritório. Estratégias como tráfego pago geram resultados mais rápidos, enquanto a construção de autoridade e nutrição de leads oferecem crescimento sustentável e de longo prazo. Em média, nossos clientes começam a ver mudanças significativas a partir do segundo mês.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pergunta">
+                                <h3>O que está incluso nos serviços oferecidos?</h3>
+                                <i data-feather="plus"></i>
+                            </div>
+                            <div class="resposta">
+                                <p>Oferecemos um pacote completo para escritórios de advocacia, incluindo gestão de tráfego pago, criação de conteúdo jurídico, automação de atendimentos, desenvolvimento de sites e consultoria estratégica. Todas as soluções são personalizadas para atender às necessidades do seu escritório.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pergunta">
+                                <h3>O que diferencia a metodologia da Rowp Law de outras agências de marketing?</h3>
+                                <i data-feather="plus"></i>
+                            </div>
+                            <div class="resposta">
+                                <p>Diferente das agências genéricas, nossa metodologia é 100% especializada no mercado jurídico. Seguimos todas as diretrizes da OAB e aplicamos estratégias validadas em mercados mais sofisticados para atrair e converter clientes de forma ética e previsível. Além disso, oferecemos suporte contínuo e acompanhamento personalizado para garantir resultados.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pergunta">
+                                <h3>Meu escritório já investe em marketing, como vocês podem ajudar?</h3>
+                                <i data-feather="plus"></i>
+                            </div>
+                            <div class="resposta">
+                                <p>Analisamos as campanhas atuais e identificamos oportunidades de otimização para melhorar o desempenho e maximizar o retorno sobre investimento. Ajustamos sua estratégia para garantir que cada ação traga mais eficiência e conversões qualificadas.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pergunta">
+                                <h3>Qual é o investimento necessário para começar?</h3>
+                                <i data-feather="plus"></i>
+                            </div>
+                            <div class="resposta">
+                                <p>O valor do investimento depende do plano escolhido e das necessidades do seu escritório. Após um diagnóstico gratuito, montamos uma proposta personalizada e transparente para garantir o melhor custo-benefício e previsibilidade nos resultados.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pergunta">
+                                <h3>Vocês oferecem garantias de resultados?</h3>
+                                <i data-feather="plus"></i>
+                            </div>
+                            <div class="resposta">
+                                <p>Trabalhamos com métricas claras e estratégias validadas, mas sabemos que o resultado depende de variáveis externas, como o desempenho comercial do advogado. Nosso compromisso é desenvolver a estratégia mais assertiva, executá-la com excelência e realizar otimizações contínuas para garantir os melhores resultados  possíveis para o seu escritório.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pergunta">
+                                <h3>Como vocês escolhem as estratégias para o meu escritório?</h3>
+                                <i data-feather="plus"></i>
+                            </div>
+                            <div class="resposta">
+                                <p>Cada estratégia é baseada em um diagnóstico aprofundado do seu nicho, concorrência e público-alvo. A partir disso, traçamos um plano personalizado que combina as melhores práticas do marketing jurídico com a realidade do seu escritório, garantindo previsibilidade e crescimento sustentável.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pergunta">
+                                <h3>O marketing jurídico da Rowp. Tech & Sales segue as diretrizes da OAB?</h3>
+                                <i data-feather="plus"></i>
+                            </div>
+                            <div class="resposta">
+                                <p>Sim! Todas as nossas estratégias são 100% éticas e seguem o Código de Ética da OAB.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="pergunta">
+                                <h3>Posso contratar apenas um serviço específico?</h3>
+                                <i data-feather="plus"></i>
+                            </div>
+                            <div class="resposta">
+                                <p>Sim! Nossos serviços são personalizáveis para atender exatamente o que seu escritório precisa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Transformação -->
+        <section class="transformacao">
+            <div class="wrapper">
+                <div class="conteudo">
+                    <div class="titulo">
+                        <h3>Comece agora a transformação do seu escritório!</h3>
+                    </div>
+                    <div class="items">
+                        <div class="item">
+                            <p><i data-feather="check-square"></i> Atendimento especializado e transparente</p>
+                        </div>
+                        <div class="item">
+                            <p><i data-feather="check-square"></i> Estratégias validadas e eficazes</p>
+                        </div>
+                        <div class="item">
+                            <p><i data-feather="check-square"></i> Mais previsibilidade para seu crescimento</p>
+                        </div>
+                    </div>
+                    <div class="botao">
+                        <a href="#formulario">Cadastre-se Agora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Rodapé -->
+        <footer>
+            <div class="wrapper">
+                <div class="conteudo">
+                    <div class="topo">
+                        <div class="logo">
+                            <img src="imagens/logo.png">
+                        </div>
+                        <div class="contato">
+                            <a href="mailto:contato@rowp.online">
+                                <i data-feather="mail"></i>
+                                contato@rowp.online
+                            </a>
+                            <a href="https://www.instagram.com/rowp.tech/">
+                                <i data-feather="instagram"></i>
+                                @rowp.tech
+                            </a>
+                            <a href="https://www.linkedin.com/company/rowp">
+                                <i data-feather="linkedin"></i>
+                                @rowp
+                            </a>
+                        </div>
+                        <div class="mapa">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.0133797227986!2d-47.05755692427427!3d-22.912877338089555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xabd883cce963dad7%3A0x1be43c7f81506e92!2sRowp.%20Tech%20%26%20Sales%20Company!5e0!3m2!1spt-BR!2sbr!4v1754108256639!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="base">
+                        <div class="copyright">
+                            © Rowp 2025 | Todos os direitos reservados.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Botão Flutuante Whatsapp -->
+        <div class="botaoFlutuante">
+            <a href="https://wa.me/message/JFFG5MF2NOLTD1">
+                <img src="imagens/whatsapp-svgrepo-com.svg">
+            </a>
+        </div>
+        
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+        
+        <!-- FontAwesome -->
+        <script src="https://unpkg.com/feather-icons"></script>
+        
+        <!-- Scripts -->
+        <script>
+        
+            // Ícones
+            feather.replace();
+            
+            // Perguntas
+            $(".pergunta").click(function() {
+                
+                // Se está fechado
+                if(!$(this).parent().hasClass("aberto")) {
+                    
+                    $(this).parent().addClass("aberto");
+                    $(this).children("svg").replaceWith(feather.icons['minus'].toSvg());
+                    
+                }
+                
+                else if($(this).parent().hasClass("aberto")) {
+                    
+                    $(this).parent().removeClass("aberto");
+                    $(this).children("svg").replaceWith(feather.icons['plus'].toSvg());
+                    
+                }
+                
             });
-        });
-    </script>
-</body>
+            
+            // Próximo passo formulário
+            
+            $("form button[type='button']").click(function() {
+                
+                passo = $(this).attr("data-proximo");
+                
+                ultimo = passo - 1;
+                
+                $("[data-passo='"+ultimo+"'").hide();
+                
+                $("[data-passo='"+passo+"'").css("display","grid");
+                
+            });
+            
+            $(".enviarInformacoes").click(function() {
+                
+                $(".enviarInformacoes").html("Enviando...");
+                
+                var nome = $("form .nome").val();
+                var telefone = $("form .telefone").val();
+                var email = $("form .email").val();
+                var nome_empresa = $("form .nome_empresa").val();
+                var instagram_empresa = $("form .instagram_empresa").val();
+                var cenario = $("form .cenario").val();
+                var experiencia = $("form .experiencia").val();
+                var faturamento = $("form .faturamento").val();
+                var urgencia = $("form .urgencia").val();
+                var investimento = $("form .investimento").val();
+                
+                $.post("enviarEmail.php",{
+                    
+                    nome: nome,
+                    telefone: telefone,
+                    email: email,
+                    nome_empresa: nome_empresa,
+                    instagram_empresa: instagram_empresa,
+                    cenario: cenario,
+                    experiencia: experiencia,
+                    faturamento: faturamento,
+                    urgencia: urgencia,
+                    investimento: investimento
+                    
+                }, function(resposta) {
+                    
+                    $(".enviarInformacoes").html("Obrigado!");
+                    $(".formulario .conteudo .contato .campos form .campo p").fadeIn();
+                    
+                });
+                
+            });
+            
+        </script>
+        
+    </body>
 </html>
